@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=1440">
+<title>Tax pro mode — Wages (W-2)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+<style>:root{--text-text:#212529;          --text-title-text:#0d0d0d;--text-neutral-text:#212529;  --text-dimmed-text:#868e96;--text-disabled-text:#adb5bd; --text-brand-text:#5e00ff;--text-info-text:#4c6ef5;     --text-error-text:#e03131;--text-success-text:#37b24d;--background-default:#ffffff;      --background-body:#ffffff;--background-default-hover:#f1f3f5;--background-body-dimmed:#f8f9fa;  --background-disabled:#e9ecef;--background-brand-light:rgba(94,0,255,.1);--background-info-light:rgba(76,110,245,.1);--background-error-light:rgba(250,82,82,.1);--background-gray-light:rgba(134,142,150,.1);--border-default-border:#dee2e6;   --border-dimmed-border:#adb5bd;--border-brand-border:#5e00ff;     --border-error-border:#fa5252;--border-error-border-light:rgba(250,82,82,.2);--border-info-border-light:rgba(76,110,245,.2);--border-width-thin:0.75px;        --border-width-default:1px;--brand-0:#f4e9ff; --brand-1:#e2cfff; --basic-white:#ffffff;--radius-none:0px; --radius-sm:4px; --radius-md:8px;--radius-lg:12px;  --radius-xl:16px; --radius-full:999px;--spacing-none:0px; --spacing-xxs:2px; --spacing-xs:4px;--spacing-sm:8px;   --spacing-md:12px; --spacing-lg:16px;--spacing-xl:20px;  --spacing-xxl:24px; --spacing-3xl:32px;--spacing-4xl:40px;--padding-3xs:4px; --padding-xxs:4px; --padding-xs:8px;--padding-sm:12px; --padding-md:16px; --padding-lg:20px;--padding-xl:24px;--font-size-xs:12px; --font-size-sm:14px; --font-size-md:16px;--font-size-lg:18px; --font-size-xl:20px;--line-height-xs:16px; --line-height-sm:20px; --line-height-md:24px;--line-height-lg:26px; --line-height-xl:28px;--letter-spacing-xs:0.03px;  --letter-spacing-sm:0px;--letter-spacing-md:0px;     --letter-spacing-lg:-0.045px;--letter-spacing-xl:-0.1px;--font-weight-regular:400; --font-weight-medium:500; --font-weight-semibold:600;--shadow-xxs:0 .5px 3px rgba(0,0,0,.043), 0 .5px 2px rgba(0,0,0,.078);--shadow-xs:0 1px 3px rgba(0,0,0,.051), 0 1px 2px rgba(0,0,0,.102);--shadow-footer:0 -1px 3px rgba(0,0,0,.051),0 -10px 15px -5px rgba(0,0,0,.102),0 -7px 7px -5px rgba(0,0,0,.039);--rail-w:60px;--body-x:76px;--topbar-h:88px;--childnav-h:64px;--chrome-top:16px;--chrome-gap:12px;--footer-h:96px}*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--background-body-dimmed);font-family:"Geist","Geist Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-weight:var(--font-weight-regular);color:var(--text-text);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}button{font:inherit;color:inherit;background:none;border:0;margin:0;padding:0;cursor:pointer}input{font:inherit;color:inherit;background:none;border:0;margin:0;padding:0}p{margin:0}.t-reg-xs{font-size:var(--font-size-xs);line-height:var(--line-height-xs);font-weight:var(--font-weight-regular);letter-spacing:var(--letter-spacing-xs)}.t-med-xs{font-size:var(--font-size-xs);line-height:var(--line-height-xs);font-weight:var(--font-weight-medium);letter-spacing:var(--letter-spacing-xs)}.t-reg-sm{font-size:var(--font-size-sm);line-height:var(--line-height-sm);font-weight:var(--font-weight-regular);letter-spacing:var(--letter-spacing-sm)}.t-med-sm{font-size:var(--font-size-sm);line-height:var(--line-height-sm);font-weight:var(--font-weight-medium);letter-spacing:var(--letter-spacing-sm)}.t-semi-sm{font-size:var(--font-size-sm);line-height:var(--line-height-sm);font-weight:var(--font-weight-semibold);letter-spacing:var(--letter-spacing-sm)}.t-reg-md{font-size:var(--font-size-md);line-height:var(--line-height-md);font-weight:var(--font-weight-regular);letter-spacing:var(--letter-spacing-md)}.t-med-md{font-size:var(--font-size-md);line-height:var(--line-height-md);font-weight:var(--font-weight-medium);letter-spacing:var(--letter-spacing-md)}.t-semi-md{font-size:var(--font-size-md);line-height:var(--line-height-md);font-weight:var(--font-weight-semibold);letter-spacing:var(--letter-spacing-md)}.t-semi-lg{font-size:var(--font-size-lg);line-height:var(--line-height-lg);font-weight:var(--font-weight-semibold);letter-spacing:var(--letter-spacing-lg)}.t-reg-lg{font-size:var(--font-size-lg);line-height:var(--line-height-lg);font-weight:var(--font-weight-regular);letter-spacing:var(--letter-spacing-lg)}.t-semi-xl{font-size:var(--font-size-xl);line-height:var(--line-height-xl);font-weight:var(--font-weight-semibold);letter-spacing:var(--letter-spacing-xl)}.ico{position:relative;flex:0 0 auto;display:block}.ico>.lf{position:absolute;display:block}.ico>.lf>svg{display:block;width:100%;height:100%}.ico-box{display:flex;align-items:center;justify-content:center;flex:0 0 auto}.page{min-width:1200px}.sidebar{position:fixed; left:0; top:0; bottom:0; width:var(--rail-w); z-index:60;background:var(--background-body);box-shadow:inset -0.5px 0 0 0 var(--border-default-border);display:flex; flex-direction:column; align-items:center;gap:var(--spacing-lg);padding:var(--padding-xl) var(--padding-sm)}.sidebar__top{height:56px;width:100%;display:flex;align-items:center;justify-content:center;gap:var(--spacing-sm);flex:0 0 auto}.sidebar__mid{flex:1 1 0;min-height:0;width:100%;display:flex;flex-direction:column}.sidebar__midtop{flex:1 1 0;min-height:0;width:100%;display:flex;flex-direction:column;gap:16px;overflow:clip}.sidebar__bottom{width:100%;box-shadow:inset 0 1px 0 0 var(--border-default-border);padding-top:var(--padding-md);display:flex;flex-direction:column}.navlink{width:100%;height:36px;display:flex;align-items:center;justify-content:center;border-radius:var(--radius-md)}.navlink--active{background:var(--background-default);padding:0 var(--padding-xs); gap:var(--padding-xs);box-shadow:inset 0 0 0 1px var(--border-dimmed-border), var(--shadow-xxs)}.navlink--default{padding:0 12px;gap:12px}.sidebar__avatarbtn{width:100%;display:flex;align-items:center;gap:8px;padding:var(--padding-xs) 0;border-radius:var(--radius-md)}.avatar{width:32px;height:32px;border-radius:var(--radius-full);background:var(--background-brand-light);color:var(--text-brand-text);display:flex;align-items:center;justify-content:center;font-size:12.8px;line-height:19.2px;font-weight:var(--font-weight-medium)}.body{margin-left:var(--body-x); margin-right:var(--spacing-lg);display:flex; flex-direction:column;padding-bottom:calc(var(--footer-h) + var(--spacing-lg))}.chrome{position:sticky; top:0; z-index:50;background:var(--background-body-dimmed);padding-top:var(--chrome-top); padding-bottom:var(--chrome-gap)}.topbar{height:var(--topbar-h);background:var(--background-body);border-radius:var(--radius-lg);box-shadow:var(--shadow-xs);display:flex; align-items:center; gap:var(--spacing-3xl);padding:var(--spacing-xxl) var(--spacing-xxl) var(--spacing-xxl) var(--spacing-xl)}.topbar__left{height:40px;display:flex;align-items:center;gap:var(--spacing-xs);flex:0 0 auto}.topbar__slot{flex:1 1 0;min-width:0;height:40px}
+
+.actionicon{width:32px;height:32px;flex:0 0 auto;display:flex;align-items:center;justify-content:center;border-radius:var(--radius-md);overflow:clip}.actionicon--outlined{background:var(--background-default);box-shadow:inset 0 0 0 var(--border-width-thin) var(--border-default-border), var(--shadow-xxs)}.crumb{display:flex;align-items:center;justify-content:center;padding:var(--padding-xxs);border-radius:var(--radius-md)}.badge{display:flex;align-items:center;justify-content:center;gap:var(--spacing-xs);min-width:20px;padding:2px var(--padding-xs);border-radius:var(--radius-xl);text-align:center}.badge--info{background:var(--background-info-light);box-shadow:inset 0 0 0 var(--border-width-default) var(--border-info-border-light);color:var(--text-info-text)}.badge--error{background:var(--background-error-light);box-shadow:inset 0 0 0 var(--border-width-default) var(--border-error-border-light);color:var(--text-error-text)}.content{background:var(--background-default);border-radius:var(--radius-lg);box-shadow:var(--shadow-xs);display:flex;flex-direction:column}.childnav{position:sticky;top:var(--childnav-top, calc(var(--chrome-top) + var(--topbar-h) + var(--chrome-gap)));z-index:40;background:var(--background-body);box-shadow:inset 0 -1px 0 0 var(--border-default-border);display:flex;align-items:center;gap:var(--spacing-lg);padding:var(--spacing-xxl) var(--spacing-xxl) var(--spacing-lg);border-radius:var(--radius-lg) var(--radius-lg) 0 0}.tabs{flex:0 0 auto;display:flex;align-items:center;gap:16px}.childnav__right{margin-left:auto;flex:0 0 auto;display:flex;align-items:center;gap:var(--spacing-md)}.tab{display:flex;align-items:center;justify-content:center;padding:var(--spacing-md) var(--spacing-xl);border-radius:var(--radius-full);background:var(--background-body);color:var(--text-dimmed-text);white-space:nowrap}.tab[aria-selected="true"]{background:var(--brand-0);box-shadow:inset 0 0 0 1px var(--brand-1);color:var(--text-brand-text)}.layout{display:flex;align-items:flex-start}.col-left{flex:0 0 256px;width:256px;display:flex;flex-direction:column;box-shadow:1px 0 0 0 var(--border-default-border);position:sticky;top:var(--band-h, calc(var(--chrome-top) + var(--topbar-h) + var(--chrome-gap) + var(--childnav-h)));align-self:flex-start;max-height:calc(100vh - var(--band-h, 204px) - var(--footer-h) - var(--spacing-lg));overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain}.col-right{flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:var(--spacing-lg);padding:var(--spacing-lg) var(--spacing-xxl) var(--spacing-xxl)}.actionmenu{display:flex;align-items:center;gap:8px;padding:var(--spacing-lg) 11px var(--spacing-lg) 24px;box-shadow:inset 0 -1px 0 0 var(--border-default-border)}.btn-year{flex:1 1 0;min-width:0;display:flex;align-items:center;gap:var(--spacing-sm);padding:6px var(--padding-xs);background:var(--background-default);border-radius:var(--radius-md);box-shadow:inset 0 0 0 var(--border-width-thin) var(--border-default-border), var(--shadow-xxs);color:var(--text-text)}.btn-year>span:not(.ico){flex:1 1 0;min-width:0;text-align:left}.navigation{background:var(--background-default);padding:var(--spacing-xxl) 0 var(--spacing-xxl) var(--spacing-xxl);display:flex;flex-direction:column;gap:var(--spacing-xxl)}.category{display:flex;flex-direction:column}.category--gap1{gap:1px}.cattitle{width:100%;display:flex;align-items:center;gap:var(--spacing-xs);padding:0 24px var(--spacing-md) 0;overflow:clip;text-align:left}.cattitle__group{flex:1 1 0;min-width:0;display:flex;align-items:center;gap:4px;white-space:nowrap}.cattitle__name{color:var(--text-title-text);flex:0 0 auto}.cattitle__count{flex:1 1 0;min-width:0;color:var(--text-dimmed-text);overflow:hidden;text-overflow:ellipsis}.subcats{width:100%;display:flex;flex-direction:column;padding-left:5px}.subcats--gap1{gap:1px}.subcat{width:100%;text-align:left;display:flex;flex-direction:column;justify-content:center;gap:var(--spacing-xxs);padding:6px 24px 6px var(--spacing-lg);box-shadow:inset var(--border-width-thin) 0 0 0 var(--border-default-border);overflow:clip}.subcat--active{background:var(--background-body-dimmed);box-shadow:inset 3px 0 0 0 var(--text-neutral-text)}.subcat__body{width:100%;display:flex;align-items:center;gap:var(--spacing-sm)}.subcat__label{flex:1 1 0;min-width:0;color:var(--text-text)}.subcat__caption{width:100%;height:20px;color:var(--text-dimmed-text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rheader{display:flex;align-items:center;justify-content:space-between}.rheader__left{display:flex;align-items:center;gap:var(--spacing-lg)}.rheader__right{display:flex;align-items:center;gap:var(--spacing-md)}.searchpill{width:306px;display:flex;align-items:center;gap:8px;padding:var(--spacing-md) 16px;background:var(--background-body);box-shadow:inset 0 0 0 1px var(--border-default-border);border-radius:var(--radius-full)}.searchpill input{flex:1 1 0;min-width:0;outline:none}.searchpill input::placeholder{color:var(--text-dimmed-text);opacity:1}.btn-lg{height:48px;display:flex;align-items:center;gap:var(--spacing-sm);padding:var(--padding-sm) var(--padding-lg) var(--padding-sm) var(--padding-md);border-radius:var(--radius-lg)}.btn-lg--outlined{background:var(--background-default);box-shadow:inset 0 0 0 var(--border-width-thin) var(--border-default-border), var(--shadow-xs);color:var(--text-text)}.btn-lg--outlined,.btn-sm{cursor:pointer;transition:background-color .18s ease, box-shadow .18s ease}.btn-lg--outlined:hover{background:var(--background-gray-light);box-shadow:inset 0 0 0 var(--border-width-thin) var(--border-dimmed-border), var(--shadow-xs)}.btn-sm:hover{background:var(--background-gray-light);box-shadow:inset 0 0 0 var(--border-width-thin) var(--border-dimmed-border), var(--shadow-xxs)}.iconwrap20{width:20px;height:20px;display:flex;align-items:center;justify-content:center;flex:0 0 auto}.crumbs{display:flex;align-items:flex-start;gap:var(--spacing-xs)}.crumbs__item{display:flex;align-items:center;justify-content:center;padding:var(--padding-xxs);border-radius:var(--radius-md)}.crumbs__sep{height:34px;display:flex;align-items:center;justify-content:center;padding:var(--padding-xxs) 0;border-radius:var(--radius-md);background:var(--background-body);width:7px;color:var(--text-disabled-text)}.formcard{background:var(--background-body-dimmed);box-shadow:inset 0 0 0 1px var(--border-default-border);border-radius:var(--radius-lg);padding:var(--spacing-xxl) 0;display:flex;flex-direction:column;gap:var(--spacing-sm)}.formcard__top{display:flex;align-items:flex-start;padding:0 var(--spacing-lg)}.formcard__chev{flex:0 0 auto;transition:transform .18s ease}.formcard.is-collapsed .formcard__chev{transform:rotate(-90deg)}.formcard.is-collapsed .sections{display:none}.formcard__right{flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:var(--spacing-xxl)}.formcard__header{width:100%;display:flex;align-items:baseline;gap:var(--spacing-lg)}.formcard__titlecol{flex:1 1 0;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:var(--spacing-sm)}.formcard__titlerow{width:100%;display:flex;align-items:center;gap:8px}.formcard__title{color:var(--text-title-text);white-space:nowrap}.formcard__sub{width:100%;color:var(--text-dimmed-text)}.formcard__actions{display:flex;align-items:center;gap:16px;flex:0 0 auto}.switchrow{display:flex;align-items:center;gap:12px}.switchrow__label{color:var(--text-title-text);white-space:nowrap}.switch{width:42px;height:20px;flex:0 0 auto;position:relative;background:var(--background-gray-light);border:1px solid var(--border-default-border);border-radius:16px;overflow:clip;cursor:pointer;transition:background-color .18s ease, border-color .18s ease}.switch[aria-checked="true"]{background:var(--text-brand-text);border-color:var(--text-brand-text)}.switch[aria-checked="true"] .switch__thumb{transform:translateY(-50%) translateX(22px)}.fieldsource{display:none;color:var(--text-dimmed-text)}.is-sources .fieldsource{display:block}.fieldsource__revert{display:inline-flex;align-items:center;gap:4px;color:var(--text-brand-text);background:none;border:0;padding:0;cursor:pointer;white-space:nowrap}.switch__thumb{position:absolute;left:2px;top:50%;transform:translateY(-50%);width:14px;height:14px;border-radius:16px;background:var(--basic-white);border:1px solid var(--basic-white);transition:transform .18s ease}.btn-sm{display:flex;align-items:center;gap:var(--spacing-sm);padding:6px var(--padding-xs);background:var(--background-default);border-radius:var(--radius-md);box-shadow:inset 0 0 0 var(--border-width-thin) var(--border-default-border), var(--shadow-xxs);color:var(--text-text);white-space:nowrap}.sections{display:flex;flex-direction:column}.section{display:flex;flex-direction:column}.divider{height:40px;position:relative}.divider::after{content:"";position:absolute;left:40px;right:40px;top:8px;height:1px;background:var(--border-default-border)}.sectionhead{display:flex;align-items:center;padding:0 var(--spacing-lg) var(--spacing-sm) var(--spacing-4xl);color:var(--text-title-text)}.line{display:flex;align-items:center;gap:var(--spacing-sm);padding:var(--spacing-xxl) var(--spacing-lg) var(--spacing-xxl) var(--spacing-4xl)}.line__label{flex:1 1 0;min-width:0;max-width:300px;display:flex;flex-direction:column;justify-content:center;gap:var(--spacing-xxs);color:var(--text-title-text)}.line__field{flex:1 1 0;min-width:332px;max-width:332px;display:flex;flex-direction:column;gap:var(--spacing-sm)}.input{width:100%;height:40px;display:flex;align-items:center;gap:var(--spacing-md);padding:0 var(--spacing-md);background:var(--background-default);border:var(--border-width-default) solid var(--border-default-border);border-radius:var(--radius-lg)}.input input{flex:1 1 0;min-width:0;outline:none;color:var(--text-text)}.input__suffix{flex:0 0 auto;text-align:right;color:var(--text-brand-text);visibility:hidden}.input:focus-within{border-color:var(--border-brand-border)}.input:focus-within .input__suffix{visibility:visible}.glyph-dollar{color:var(--text-dimmed-text)}.input:focus-within .glyph-dollar{color:var(--text-text)}.input__suffix{position:relative;cursor:pointer;background:none;border:0;padding:0}.maptip{position:absolute; bottom:calc(100% + 10px); left:50%;transform:translateX(-50%);padding:var(--spacing-sm);border-radius:var(--radius-sm);background:var(--text-text);color:var(--background-default);white-space:nowrap; text-align:center;z-index:45; pointer-events:none}.maptip::after{content:""; position:absolute; top:100%; left:50%;transform:translateX(-50%);border:4px solid transparent;border-top-color:var(--text-text)}.line--error{background:var(--background-error-light);flex-direction:column;align-items:flex-start;justify-content:center;gap:var(--spacing-md)}.line--error .line__label{color:var(--text-error-text)}.line--error .input{border-color:var(--border-error-border)}.line--error .input:focus-within{border-color:var(--border-error-border)}.line__actions{display:flex;align-items:center;gap:var(--spacing-sm);flex:0 0 auto;visibility:hidden}.line:not(.line--error):hover,.line:not(.line--error):focus-within{background:var(--background-default-hover)}.line:hover>.line__actions,.line:focus-within>.line__actions{visibility:visible}.rowaction--brand{color:var(--text-brand-text);cursor:pointer}.rowaction--brand .rowaction__text{color:var(--text-brand-text)}.fields{width:100%;display:flex;align-items:center;gap:8px}.rowactions{display:flex;align-items:center;gap:8px;flex:0 0 auto}.rowaction{display:flex;align-items:center;gap:0;flex:0 0 auto}.rowaction__text{color:var(--text-error-text);white-space:nowrap}.vdivider{width:1px;height:30px;background:var(--border-default-border);flex:0 0 auto}.message{width:100%;display:flex;flex-direction:column;gap:12px}.message__text{width:100%;color:var(--text-text)}.message__text b{font-weight:var(--font-weight-semibold)}.chips{display:flex;align-items:flex-start;gap:8px}.chip{display:flex;align-items:center;justify-content:center;gap:var(--spacing-sm);padding:var(--padding-3xs) var(--padding-xs);background:var(--background-error-light);border-radius:var(--radius-sm);color:var(--text-error-text);white-space:nowrap}.stickyfooter{position:fixed;bottom:0;left:var(--body-x);right:var(--spacing-lg);height:var(--footer-h);z-index:55;background:#ffffff;box-shadow:inset 0 1px 0 0 var(--border-default-border), var(--shadow-footer);display:flex;align-items:center;gap:10px;padding:24px}.footer__left{flex:1 1 0;min-width:0;display:flex;align-items:center;gap:var(--spacing-xxl)}.liab{display:flex;align-items:center;gap:var(--spacing-lg);flex:0 0 auto}.liab__cell{display:flex;flex-direction:column;justify-content:center;padding-right:var(--spacing-xl);box-shadow:inset -1px 0 0 0 var(--border-default-border);white-space:nowrap;font-weight:var(--font-weight-medium)}.liab__cell--first{align-items:flex-start}.liab__cell--mid{align-items:center}.liab__cell--last{align-items:center;box-shadow:none;padding-right:0;gap:var(--spacing-xxs)}.liab__k{color:var(--text-dimmed-text)}.liab__v--success{color:var(--text-success-text)}.liab__v--neutral{color:var(--text-text)}.saved{display:flex;align-items:center;gap:var(--spacing-xs);flex:0 0 auto}.saved__text{color:var(--text-dimmed-text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.btn-issues{height:48px;display:flex;align-items:center;justify-content:center;gap:var(--spacing-sm);padding:10px var(--spacing-lg) 10px var(--padding-lg);background:var(--background-error-light);border-radius:var(--radius-lg);color:var(--text-error-text);white-space:nowrap}.btn-upnext{height:48px;display:flex;align-items:center;justify-content:center;gap:var(--spacing-sm);padding:var(--spacing-md) var(--padding-lg) var(--spacing-md) var(--padding-md);background:var(--background-disabled);border-radius:var(--radius-lg);color:var(--text-disabled-text);white-space:nowrap;cursor:default}:focus-visible{outline:2px solid var(--border-brand-border);outline-offset:2px}.input:focus-within :focus-visible,.searchpill :focus-visible{outline:none}.btn-lg--brand,.btn-sm--brand{background:var(--background-brand-light);color:var(--text-brand-text)}.btn-sm--brand{background:var(--text-brand-text);color:var(--background-default);box-shadow:none}.btn-lg--brand:hover{background:rgba(94,0,255,.16)}.btn-sm--brand:hover{background:#4c00cc}.takeover{display:none;position:relative}body.is-comparing .takeover{display:flex;flex-direction:column;animation:tkIn .26s cubic-bezier(.2,.7,.3,1)}@keyframes tkIn{from{opacity:0;transform:translateY(10px) scale(.99)}to{opacity:1;transform:none}}body.is-comparing .layout,body.is-comparing .childnav{display:none}body.is-leaving .layout{opacity:0;transition:opacity .18s ease;pointer-events:none}.tk__head{position:sticky;top:var(--childnav-top,116px);z-index:6;display:flex;align-items:center;justify-content:space-between;padding:var(--spacing-xxl) var(--spacing-xxl) var(--spacing-lg);background:var(--background-default);border-radius:var(--radius-lg) var(--radius-lg) 0 0}.tk__headright{display:flex;align-items:center;gap:var(--spacing-md)}.tk__cols{display:flex;gap:var(--spacing-lg);padding:0 var(--spacing-xxl) var(--spacing-xxl);align-items:flex-start}
+/* Both panels match height as in the frame; the viewer takes the slack so the
+   right column is not blank once you scroll past the scan. */
+.tk__viewer{flex:1 1 auto;overflow:auto;overscroll-behavior:contain}.tk__panel{flex:1 1 0;min-width:0;border-radius:var(--radius-lg);box-shadow:inset 0 0 0 1px var(--border-default-border);display:flex;flex-direction:column}.tk__form{background:var(--background-body-dimmed)}.tk__pdf{background:var(--background-default);position:sticky;top:calc(var(--childnav-top,116px) + 88px);align-self:flex-start;max-height:calc(100vh - var(--childnav-top,116px) - 88px - var(--footer-h) - var(--spacing-lg))}.tk__form{overflow:hidden}.tk__zoomval{background:var(--background-default-hover);border-radius:var(--radius-md);padding:4px 10px}.tk__form .line__actions{display:none}.tk__form [data-card-toggle] .cat-chev,.tk__form .formcard__actions .btn-sm{display:none}.tk__form .badge{flex:0 0 auto;white-space:nowrap}.tk__form .rowactions{display:none}.tk__form .line__field{flex:1 1 0;min-width:0;max-width:none}.tk__form .line__label{max-width:210px}.tk__form .formcard{background:none;box-shadow:none;border-radius:0}.tk__pdf{overflow:hidden}.tk__pdfbar{flex:0 0 auto;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 var(--spacing-xxl)}.tk__zoom{display:flex;align-items:center;gap:var(--spacing-sm);color:var(--text-text)}.tk__select{position:relative}.tk__selectbtn{display:flex;align-items:center;gap:var(--spacing-sm);padding:6px var(--spacing-md);background:var(--background-default);border-radius:var(--radius-md);box-shadow:inset 0 0 0 var(--border-width-thin) var(--border-default-border), var(--shadow-xxs);color:var(--text-text);white-space:nowrap;cursor:pointer;transition:background-color .18s ease, box-shadow .18s ease}.tk__selectbtn:hover{background:var(--background-gray-light)}.tk__menu{position:absolute;top:calc(100% + 6px);left:0;min-width:240px;background:var(--background-default);border-radius:var(--radius-lg);box-shadow:inset 0 0 0 1px var(--border-default-border), var(--shadow-xs);padding:var(--spacing-sm) 0;z-index:5;display:flex;flex-direction:column}.tk__menu[hidden]{display:none}.tk__opt{text-align:left;padding:10px var(--spacing-lg);color:var(--text-text);white-space:nowrap;cursor:pointer;background:none;border:0;transition:background-color .14s ease}.tk__opt:hover{background:var(--background-gray-light)}.tk__opt[aria-current="true"]{color:var(--text-brand-text)}.tk__nav{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;padding:var(--spacing-lg) var(--spacing-xxl);background:var(--background-body-dimmed)}.tk__viewer{padding:0 var(--spacing-xxl) var(--spacing-xxl);background:var(--background-body-dimmed);border-radius:0 0 var(--radius-lg) var(--radius-lg);min-height:0}.tk__page{position:relative;width:160%}.tk__scan{display:block;width:100%;height:auto}.tk__box{position:absolute;border:2px solid var(--text-brand-text);border-radius:3px;background:rgba(94,0,255,.07);transition:left .3s cubic-bezier(.2,.7,.3,1), top .3s cubic-bezier(.2,.7,.3,1),width .3s ease, height .3s ease, opacity .2s ease;pointer-events:none}.line.is-linked{background:var(--background-brand-light);box-shadow:inset 0 1px 0 0 var(--text-brand-text), inset 0 -1px 0 0 var(--text-brand-text)}.line.is-linked .input{border-color:var(--border-brand-border)}.tk__wire{position:absolute;inset:0;pointer-events:none;overflow:visible;z-index:4}.tk__wire path{stroke:var(--text-brand-text);stroke-width:2;stroke-linecap:round}.issuescrim{position:fixed; inset:0; z-index:59;background:rgba(0,0,0,.08);opacity:0; transition:opacity .2s ease}body.is-issues .issuescrim{opacity:1}.issuescrim[hidden]{display:none}.issues{position:fixed; top:0; right:0; bottom:0; width:408px;z-index:60;background:var(--background-default);box-shadow:var(--shadow-xs);transform:translateX(100%);transition:transform .28s cubic-bezier(.2,.7,.3,1);overflow-y:auto}body.is-issues .issues{transform:none}.issues__inner{min-height:100%;padding:40px var(--spacing-xxl);display:flex; flex-direction:column; gap:var(--spacing-xxl)}.issues__head{display:flex;flex-direction:column;gap:var(--spacing-md)}.issues__titlerow{display:flex;align-items:flex-start;justify-content:space-between;gap:var(--spacing-md)}.issues__list{display:flex;flex-direction:column;gap:var(--spacing-lg)}.issuecard{background:var(--background-error-light);border-radius:var(--radius-lg);padding:var(--spacing-lg);display:flex;flex-direction:column;gap:var(--spacing-sm);align-items:flex-start}.issuecard__eyebrow{color:var(--text-error-text)}.issuecard__title{color:var(--text-title-text)}.issuecard__body{color:var(--text-text)}.issuecard .chip{margin-top:var(--spacing-xs);cursor:pointer;background:rgba(250,82,82,.2)}.issuecard .chip[disabled]{opacity:.5;cursor:not-allowed}.issues__cta{margin-top:auto;width:100%}.line.is-flash{animation:flash 1.6s ease-out}@keyframes flash{0%,55%{background:var(--background-brand-light)}100%{background:transparent}}.rowactions .rowaction{color:var(--text-error-text)}.chip{color:var(--text-error-text)}.btn-lg--outlined .ico,.btn-sm:not(.btn-sm--brand) .ico,.topbar .ico,.actionmenu .ico{color:var(--text-neutral-text)}.tk__head .btn-lg--outlined .ico{color:var(--text-neutral-text)}</style>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<g id="g-chevron-left"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.42 0.24C6.75 0.57 6.75 1.1 6.42 1.42L2.01 5.83L6.42 10.24C6.75 10.57 6.75 11.1 6.42 11.42C6.1 11.75 5.57 11.75 5.24 11.42L0.24 6.42C-0.08 6.1 -0.08 5.57 0.24 5.24L5.24 0.24C5.57 -0.08 6.1 -0.08 6.42 0.24Z" fill="currentColor"/></g>
+<g id="g-chevron-down"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.29 0.29C0.68 -0.1 1.32 -0.1 1.71 0.29L7 5.59L12.29 0.29C12.68 -0.1 13.32 -0.1 13.71 0.29C14.1 0.68 14.1 1.32 13.71 1.71L7.71 7.71C7.32 8.1 6.68 8.1 6.29 7.71L0.29 1.71C-0.1 1.32 -0.1 0.68 0.29 0.29Z" fill="#868E96"/></g>
+<g id="g-sidebar-expand"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 1.67C2.04 1.67 1.67 2.04 1.67 2.5V12.5C1.67 12.96 2.04 13.33 2.5 13.33H4.17V1.67H2.5ZM2.5 0C1.12 0 0 1.12 0 2.5V12.5C0 13.88 1.12 15 2.5 15H12.5C13.88 15 15 13.88 15 12.5V2.5C15 1.12 13.88 0 12.5 0H2.5ZM5.83 1.67V13.33H12.5C12.96 13.33 13.33 12.96 13.33 12.5V2.5C13.33 2.04 12.96 1.67 12.5 1.67H5.83ZM8.58 5.24C8.9 4.92 9.43 4.92 9.76 5.24L11.42 6.91C11.75 7.24 11.75 7.76 11.42 8.09L9.76 9.76C9.43 10.08 8.9 10.08 8.58 9.76C8.25 9.43 8.25 8.9 8.58 8.58L9.65 7.5L8.58 6.42C8.25 6.1 8.25 5.57 8.58 5.24Z" fill="#212529"/></g>
+<g id="g-sidebar-collapse"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 1.67C2.04 1.67 1.67 2.04 1.67 2.5V12.5C1.67 12.96 2.04 13.33 2.5 13.33H4.17V1.67H2.5ZM2.5 0C1.12 0 0 1.12 0 2.5V12.5C0 13.88 1.12 15 2.5 15H12.5C13.88 15 15 13.88 15 12.5V2.5C15 1.12 13.88 0 12.5 0H2.5ZM5.83 1.67V13.33H12.5C12.96 13.33 13.33 12.96 13.33 12.5V2.5C13.33 2.04 12.96 1.67 12.5 1.67H5.83ZM10.59 5.24C10.91 5.57 10.91 6.1 10.59 6.42L9.51 7.5L10.59 8.58C10.91 8.9 10.91 9.43 10.59 9.76C10.26 10.08 9.74 10.08 9.41 9.76L7.74 8.09C7.42 7.76 7.42 7.24 7.74 6.91L9.41 5.24C9.74 4.92 10.26 4.92 10.59 5.24Z" fill="#212529"/></g>
+<g id="g-users"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.83 1.67C4.45 1.67 3.33 2.79 3.33 4.17C3.33 5.55 4.45 6.67 5.83 6.67C7.21 6.67 8.33 5.55 8.33 4.17C8.33 2.79 7.21 1.67 5.83 1.67ZM1.67 4.17C1.67 1.87 3.53 0 5.83 0C8.13 0 10 1.87 10 4.17C10 6.47 8.13 8.33 5.83 8.33C3.53 8.33 1.67 6.47 1.67 4.17ZM10.86 0.73C10.97 0.29 11.43 0.02 11.87 0.13C12.77 0.36 13.56 0.89 14.13 1.62C14.7 2.35 15.01 3.25 15.01 4.17C15.01 5.1 14.7 5.99 14.13 6.73C13.56 7.46 12.77 7.98 11.87 8.21C11.43 8.32 10.97 8.05 10.86 7.61C10.75 7.16 11.01 6.71 11.46 6.59C12 6.46 12.47 6.14 12.81 5.7C13.16 5.27 13.34 4.73 13.34 4.17C13.34 3.62 13.16 3.08 12.81 2.64C12.47 2.2 12 1.89 11.46 1.75C11.01 1.63 10.75 1.18 10.86 0.73ZM4.17 11.67C3.5 11.67 2.87 11.93 2.4 12.4C1.93 12.87 1.67 13.5 1.67 14.17V15.83C1.67 16.29 1.29 16.67 0.83 16.67C0.37 16.67 0 16.29 0 15.83V14.17C0 13.06 0.44 12 1.22 11.22C2 10.44 3.06 10 4.17 10H7.5C8.61 10 9.66 10.44 10.45 11.22C11.23 12 11.67 13.06 11.67 14.17V15.83C11.67 16.29 11.29 16.67 10.83 16.67C10.37 16.67 10 16.29 10 15.83V14.17C10 13.5 9.74 12.87 9.27 12.4C8.8 11.93 8.16 11.67 7.5 11.67H4.17ZM12.53 10.75C12.64 10.3 13.1 10.04 13.54 10.15C14.43 10.38 15.22 10.9 15.79 11.62C16.35 12.35 16.66 13.24 16.67 14.16L16.67 14.17L16.67 15.83C16.67 16.29 16.29 16.67 15.83 16.67C15.37 16.67 15 16.29 15 15.83V14.17C15 13.62 14.81 13.08 14.47 12.65C14.13 12.21 13.66 11.9 13.12 11.77C12.68 11.65 12.41 11.2 12.53 10.75Z" fill="#212529"/></g>
+<g id="g-user"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.83 1.67C4.45 1.67 3.33 2.79 3.33 4.17C3.33 5.55 4.45 6.67 5.83 6.67C7.21 6.67 8.33 5.55 8.33 4.17C8.33 2.79 7.21 1.67 5.83 1.67ZM1.67 4.17C1.67 1.87 3.53 0 5.83 0C8.13 0 10 1.87 10 4.17C10 6.47 8.13 8.33 5.83 8.33C3.53 8.33 1.67 6.47 1.67 4.17ZM4.17 11.67C3.5 11.67 2.87 11.93 2.4 12.4C1.93 12.87 1.67 13.5 1.67 14.17V15.83C1.67 16.29 1.29 16.67 0.83 16.67C0.37 16.67 0 16.29 0 15.83V14.17C0 13.06 0.44 12 1.22 11.22C2 10.44 3.06 10 4.17 10H7.5C8.61 10 9.66 10.44 10.45 11.22C11.23 12 11.67 13.06 11.67 14.17V15.83C11.67 16.29 11.29 16.67 10.83 16.67C10.37 16.67 10 16.29 10 15.83V14.17C10 13.5 9.74 12.87 9.27 12.4C8.8 11.93 8.16 11.67 7.5 11.67H4.17Z" fill="#495057"/></g>
+<g id="g-list-details"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.67C0 0.75 0.75 0 1.67 0H5C5.92 0 6.67 0.75 6.67 1.67V5C6.67 5.92 5.92 6.67 5 6.67H1.67C0.75 6.67 0 5.92 0 5V1.67ZM5 1.67H1.67V5H5V1.67ZM8.33 1.67C8.33 1.21 8.71 0.83 9.17 0.83H15.83C16.29 0.83 16.67 1.21 16.67 1.67C16.67 2.13 16.29 2.5 15.83 2.5H9.17C8.71 2.5 8.33 2.13 8.33 1.67ZM8.33 5C8.33 4.54 8.71 4.17 9.17 4.17H13.33C13.79 4.17 14.17 4.54 14.17 5C14.17 5.46 13.79 5.83 13.33 5.83H9.17C8.71 5.83 8.33 5.46 8.33 5ZM0 10C0 9.08 0.75 8.33 1.67 8.33H5C5.92 8.33 6.67 9.08 6.67 10V13.33C6.67 14.25 5.92 15 5 15H1.67C0.75 15 0 14.25 0 13.33V10ZM5 10H1.67V13.33H5V10ZM8.33 10C8.33 9.54 8.71 9.17 9.17 9.17H15.83C16.29 9.17 16.67 9.54 16.67 10C16.67 10.46 16.29 10.83 15.83 10.83H9.17C8.71 10.83 8.33 10.46 8.33 10ZM8.33 13.33C8.33 12.87 8.71 12.5 9.17 12.5H13.33C13.79 12.5 14.17 12.87 14.17 13.33C14.17 13.79 13.79 14.17 13.33 14.17H9.17C8.71 14.17 8.33 13.79 8.33 13.33Z" fill="#212529"/></g>
+<g id="g-alert-triangle"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.65 0.28C5.96 0.1 6.31 0 6.66 0C7.02 0 7.37 0.1 7.68 0.28C7.99 0.46 8.24 0.72 8.41 1.03L13.14 9.19C13.16 9.21 13.17 9.24 13.18 9.27C13.31 9.57 13.35 9.9 13.32 10.23C13.28 10.55 13.17 10.86 12.99 11.13C12.81 11.4 12.56 11.63 12.28 11.78C11.99 11.94 11.67 12.02 11.34 12.02L11.34 12.02H2C1.99 12.02 1.98 12.02 1.97 12.02C1.94 12.02 1.92 12.02 1.9 12.02C1.58 12 1.27 11.91 0.99 11.75C0.72 11.59 0.48 11.37 0.31 11.1C0.14 10.83 0.04 10.52 0.01 10.2C-0.02 9.89 0.03 9.57 0.15 9.27C0.16 9.24 0.17 9.21 0.19 9.19L4.92 1.03C5.09 0.72 5.34 0.46 5.65 0.28ZM1.97 10.69C1.98 10.69 1.99 10.69 2 10.69H11.34C11.44 10.69 11.55 10.66 11.64 10.61C11.74 10.56 11.82 10.48 11.88 10.39C11.94 10.3 11.98 10.2 11.99 10.09C12 9.99 11.99 9.9 11.96 9.81L7.25 1.69L7.25 1.68C7.19 1.57 7.11 1.49 7 1.43C6.9 1.37 6.78 1.33 6.66 1.33C6.55 1.33 6.43 1.37 6.33 1.43C6.22 1.49 6.14 1.57 6.08 1.68L6.07 1.69L1.37 9.81C1.34 9.9 1.33 9.99 1.34 10.08C1.35 10.19 1.38 10.29 1.44 10.38C1.49 10.47 1.57 10.55 1.66 10.6C1.76 10.65 1.86 10.68 1.97 10.69C1.97 10.69 1.97 10.69 1.97 10.69ZM6.67 4.02C7.04 4.02 7.34 4.32 7.34 4.69V6.02C7.34 6.39 7.04 6.69 6.67 6.69C6.3 6.69 6 6.39 6 6.02V4.69C6 4.32 6.3 4.02 6.67 4.02ZM6.67 8.02C7.04 8.02 7.34 8.32 7.34 8.69V8.69C7.34 9.06 7.04 9.36 6.67 9.36C6.3 9.36 6 9.06 6 8.69V8.69C6 8.32 6.3 8.02 6.67 8.02Z" fill="#FA5252"/></g>
+<g id="g-check"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.14 0.2C11.4 0.46 11.4 0.88 11.14 1.14L4.47 7.8C4.21 8.07 3.79 8.07 3.53 7.8L0.2 4.47C-0.07 4.21 -0.07 3.79 0.2 3.53C0.46 3.27 0.88 3.27 1.14 3.53L4 6.39L10.2 0.2C10.46 -0.07 10.88 -0.07 11.14 0.2Z" fill="#40C057"/></g>
+<g id="g-check-error"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.35 0.15C8.55 0.34 8.55 0.66 8.35 0.85L3.35 5.85C3.16 6.05 2.84 6.05 2.65 5.85L0.15 3.35C-0.05 3.16 -0.05 2.84 0.15 2.65C0.34 2.45 0.66 2.45 0.85 2.65L3 4.79L7.65 0.15C7.84 -0.05 8.16 -0.05 8.35 0.15Z" fill="#E03131"/></g>
+<g id="g-search"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.67 1.67C3.91 1.67 1.67 3.91 1.67 6.67C1.67 9.43 3.91 11.67 6.67 11.67C9.43 11.67 11.67 9.43 11.67 6.67C11.67 3.91 9.43 1.67 6.67 1.67ZM0 6.67C0 2.98 2.98 0 6.67 0C10.35 0 13.33 2.98 13.33 6.67C13.33 8.21 12.81 9.63 11.93 10.75L16.42 15.24C16.75 15.57 16.75 16.1 16.42 16.42C16.1 16.75 15.57 16.75 15.24 16.42L10.75 11.93C9.63 12.81 8.21 13.33 6.67 13.33C2.98 13.33 0 10.35 0 6.67Z" fill="#868E96"/></g>
+<g id="g-message2"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 2C3.47 2 2.96 2.21 2.59 2.59C2.21 2.96 2 3.47 2 4V10C2 10.53 2.21 11.04 2.59 11.41C2.96 11.79 3.47 12 4 12H6C6.27 12 6.52 12.11 6.71 12.29L9 14.59L11.29 12.29C11.48 12.11 11.73 12 12 12H14C14.53 12 15.04 11.79 15.41 11.41C15.79 11.04 16 10.53 16 10V4C16 3.47 15.79 2.96 15.41 2.59C15.04 2.21 14.53 2 14 2H4ZM1.17 1.17C1.92 0.42 2.94 0 4 0H14C15.06 0 16.08 0.42 16.83 1.17C17.58 1.92 18 2.94 18 4V10C18 11.06 17.58 12.08 16.83 12.83C16.08 13.58 15.06 14 14 14H12.41L9.71 16.71C9.32 17.1 8.68 17.1 8.29 16.71L5.59 14H4C2.94 14 1.92 13.58 1.17 12.83C0.42 12.08 0 11.06 0 10V4C0 2.94 0.42 1.92 1.17 1.17ZM4 5C4 4.45 4.45 4 5 4H13C13.55 4 14 4.45 14 5C14 5.55 13.55 6 13 6H5C4.45 6 4 5.55 4 5ZM4 9C4 8.45 4.45 8 5 8H11C11.55 8 12 8.45 12 9C12 9.55 11.55 10 11 10H5C4.45 10 4 9.55 4 9Z" fill="currentColor"/></g>
+<g id="g-message2-error"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.33 1.67C2.89 1.67 2.47 1.84 2.15 2.15C1.84 2.47 1.67 2.89 1.67 3.33V8.33C1.67 8.78 1.84 9.2 2.15 9.51C2.47 9.82 2.89 10 3.33 10H5C5.22 10 5.43 10.09 5.59 10.24L7.5 12.15L9.41 10.24C9.57 10.09 9.78 10 10 10H11.67C12.11 10 12.53 9.82 12.85 9.51C13.16 9.2 13.33 8.78 13.33 8.33V3.33C13.33 2.89 13.16 2.47 12.85 2.15C12.53 1.84 12.11 1.67 11.67 1.67H3.33ZM0.98 0.98C1.6 0.35 2.45 0 3.33 0H11.67C12.55 0 13.4 0.35 14.02 0.98C14.65 1.6 15 2.45 15 3.33V8.33C15 9.22 14.65 10.07 14.02 10.69C13.4 11.32 12.55 11.67 11.67 11.67H10.35L8.09 13.92C7.76 14.25 7.24 14.25 6.91 13.92L4.65 11.67H3.33C2.45 11.67 1.6 11.32 0.98 10.69C0.35 10.07 0 9.22 0 8.33V3.33C0 2.45 0.35 1.6 0.98 0.98ZM3.33 4.17C3.33 3.71 3.71 3.33 4.17 3.33H10.83C11.29 3.33 11.67 3.71 11.67 4.17C11.67 4.63 11.29 5 10.83 5H4.17C3.71 5 3.33 4.63 3.33 4.17ZM3.33 7.5C3.33 7.04 3.71 6.67 4.17 6.67H9.17C9.63 6.67 10 7.04 10 7.5C10 7.96 9.63 8.33 9.17 8.33H4.17C3.71 8.33 3.33 7.96 3.33 7.5Z" fill="#E03131"/></g>
+<g id="g-maximize"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 0H5C5.55 0 6 0.45 6 1C6 1.55 5.55 2 5 2H3.41L7.71 6.29C8.1 6.68 8.1 7.32 7.71 7.71C7.32 8.1 6.68 8.1 6.29 7.71L2 3.41V5C2 5.55 1.55 6 1 6C0.45 6 0 5.55 0 5V1C0 0.45 0.45 0 1 0ZM14.59 2H13C12.45 2 12 1.55 12 1C12 0.45 12.45 0 13 0H17C17.55 0 18 0.45 18 1V5C18 5.55 17.55 6 17 6C16.45 6 16 5.55 16 5V3.41L11.71 7.71C11.32 8.1 10.68 8.1 10.29 7.71C9.9 7.32 9.9 6.68 10.29 6.29L14.59 2ZM7.71 10.29C8.1 10.68 8.1 11.32 7.71 11.71L3.41 16H5C5.55 16 6 16.45 6 17C6 17.55 5.55 18 5 18H1C0.45 18 0 17.55 0 17V13C0 12.45 0.45 12 1 12C1.55 12 2 12.45 2 13V14.59L6.29 10.29C6.68 9.9 7.32 9.9 7.71 10.29ZM10.29 10.29C10.68 9.9 11.32 9.9 11.71 10.29L16 14.59V13C16 12.45 16.45 12 17 12C17.55 12 18 12.45 18 13V17C18 17.55 17.55 18 17 18H13C12.45 18 12 17.55 12 17C12 16.45 12.45 16 13 16H14.59L10.29 11.71C9.9 11.32 9.9 10.68 10.29 10.29Z" fill="currentColor"/></g>
+<g id="g-file-text"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 1.33C1.82 1.33 1.65 1.4 1.53 1.53C1.4 1.65 1.33 1.82 1.33 2V11.33C1.33 11.51 1.4 11.68 1.53 11.8C1.65 11.93 1.82 12 2 12H8.67C8.84 12 9.01 11.93 9.14 11.8C9.26 11.68 9.33 11.51 9.33 11.33V4.67H7.33C6.98 4.67 6.64 4.53 6.39 4.28C6.14 4.03 6 3.69 6 3.33V1.33H2ZM7.33 2.28L8.39 3.33H7.33V2.28ZM0.59 0.59C0.96 0.21 1.47 0 2 0H6.67C6.84 0 7.01 0.07 7.14 0.2L10.47 3.53C10.6 3.65 10.67 3.82 10.67 4V11.33C10.67 11.86 10.46 12.37 10.08 12.75C9.71 13.12 9.2 13.33 8.67 13.33H2C1.47 13.33 0.96 13.12 0.59 12.75C0.21 12.37 0 11.86 0 11.33V2C0 1.47 0.21 0.96 0.59 0.59ZM2.67 4.67C2.67 4.3 2.97 4 3.33 4H4C4.37 4 4.67 4.3 4.67 4.67C4.67 5.03 4.37 5.33 4 5.33H3.33C2.97 5.33 2.67 5.03 2.67 4.67ZM2.67 7.33C2.67 6.97 2.97 6.67 3.33 6.67H7.33C7.7 6.67 8 6.97 8 7.33C8 7.7 7.7 8 7.33 8H3.33C2.97 8 2.67 7.7 2.67 7.33ZM2.67 10C2.67 9.63 2.97 9.33 3.33 9.33H7.33C7.7 9.33 8 9.63 8 10C8 10.37 7.7 10.67 7.33 10.67H3.33C2.97 10.67 2.67 10.37 2.67 10Z" fill="#868E96"/></g>
+<g id="g-file-text-disabled"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 2C2.73 2 2.48 2.11 2.29 2.29C2.11 2.48 2 2.73 2 3V17C2 17.27 2.11 17.52 2.29 17.71C2.48 17.89 2.73 18 3 18H13C13.27 18 13.52 17.89 13.71 17.71C13.89 17.52 14 17.27 14 17V7H11C10.47 7 9.96 6.79 9.59 6.41C9.21 6.04 9 5.53 9 5V2H3ZM11 3.41L12.59 5H11V3.41ZM0.88 0.88C1.44 0.32 2.2 0 3 0H10C10.27 0 10.52 0.11 10.71 0.29L15.71 5.29C15.89 5.48 16 5.73 16 6V17C16 17.8 15.68 18.56 15.12 19.12C14.56 19.68 13.8 20 13 20H3C2.2 20 1.44 19.68 0.88 19.12C0.32 18.56 0 17.8 0 17V3C0 2.2 0.32 1.44 0.88 0.88ZM4 7C4 6.45 4.45 6 5 6H6C6.55 6 7 6.45 7 7C7 7.55 6.55 8 6 8H5C4.45 8 4 7.55 4 7ZM4 11C4 10.45 4.45 10 5 10H11C11.55 10 12 10.45 12 11C12 11.55 11.55 12 11 12H5C4.45 12 4 11.55 4 11ZM4 15C4 14.45 4.45 14 5 14H11C11.55 14 12 14.45 12 15C12 15.55 11.55 16 11 16H5C4.45 16 4 15.55 4 15Z" fill="#ADB5BD"/></g>
+<g id="g-file-search"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 1.67C2.28 1.67 2.07 1.75 1.91 1.91C1.75 2.07 1.67 2.28 1.67 2.5V14.17C1.67 14.39 1.75 14.6 1.91 14.76C2.07 14.91 2.28 15 2.5 15H6.67C7.13 15 7.5 15.37 7.5 15.83C7.5 16.29 7.13 16.67 6.67 16.67H2.5C1.84 16.67 1.2 16.4 0.73 15.93C0.26 15.47 0 14.83 0 14.17V2.5C0 1.84 0.26 1.2 0.73 0.73C1.2 0.26 1.84 0 2.5 0H8.33C8.55 0 8.77 0.09 8.92 0.24L13.09 4.41C13.25 4.57 13.33 4.78 13.33 5V8.75C13.33 9.21 12.96 9.58 12.5 9.58C12.04 9.58 11.67 9.21 11.67 8.75V5.83H9.17C8.72 5.83 8.3 5.66 7.99 5.35C7.68 5.03 7.5 4.61 7.5 4.17V1.67H2.5ZM9.17 2.85L10.49 4.17H9.17V2.85ZM10.42 11.67C9.73 11.67 9.17 12.23 9.17 12.92C9.17 13.61 9.73 14.17 10.42 14.17C11.11 14.17 11.67 13.61 11.67 12.92C11.67 12.23 11.11 11.67 10.42 11.67ZM7.5 12.92C7.5 11.31 8.81 10 10.42 10C12.03 10 13.33 11.31 13.33 12.92C13.33 13.42 13.21 13.89 12.98 14.3L14.76 16.08C15.08 16.4 15.08 16.93 14.76 17.26C14.43 17.58 13.9 17.58 13.58 17.26L11.8 15.48C11.39 15.71 10.92 15.83 10.42 15.83C8.81 15.83 7.5 14.53 7.5 12.92Z" fill="currentColor"/></g>
+<g id="g-dollar"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 0C5.46 0 5.83 0.37 5.83 0.83V2.5H6.67C6.68 2.5 6.69 2.5 6.7 2.5C7.37 2.53 8.01 2.76 8.54 3.15C9.08 3.55 9.48 4.1 9.7 4.72C9.86 5.16 9.63 5.63 9.19 5.79C8.76 5.94 8.28 5.71 8.13 5.28C8.02 4.96 7.82 4.69 7.55 4.49C7.29 4.3 6.97 4.18 6.65 4.17H3.33C2.89 4.17 2.47 4.34 2.15 4.65C1.84 4.97 1.67 5.39 1.67 5.83C1.67 6.28 1.84 6.7 2.15 7.01C2.47 7.32 2.89 7.5 3.33 7.5H6.67C7.55 7.5 8.4 7.85 9.02 8.48C9.65 9.1 10 9.95 10 10.83C10 11.72 9.65 12.57 9.02 13.19C8.4 13.82 7.55 14.17 6.67 14.17H5.83V15.83C5.83 16.29 5.46 16.67 5 16.67C4.54 16.67 4.17 16.29 4.17 15.83V14.17H3.33C3.32 14.17 3.31 14.17 3.3 14.17C2.63 14.14 1.99 13.91 1.46 13.51C0.92 13.12 0.52 12.57 0.3 11.94C0.14 11.51 0.37 11.03 0.81 10.88C1.24 10.73 1.72 10.96 1.87 11.39C1.98 11.7 2.18 11.98 2.45 12.17C2.71 12.37 3.03 12.48 3.35 12.5H6.67C7.11 12.5 7.53 12.32 7.85 12.01C8.16 11.7 8.33 11.28 8.33 10.83C8.33 10.39 8.16 9.97 7.85 9.65C7.53 9.34 7.11 9.17 6.67 9.17H3.33C2.45 9.17 1.6 8.82 0.98 8.19C0.35 7.57 0 6.72 0 5.83C0 4.95 0.35 4.1 0.98 3.48C1.6 2.85 2.45 2.5 3.33 2.5H4.17V0.83C4.17 0.37 4.54 0 5 0Z" fill="currentColor"/></g>
+<g id="g-reload"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.63 1.11C5.08 0.74 6.57 1.32 7.39 2.5ZM7.39 2.5H6C5.72 2.5 5.5 2.73 5.5 3C5.5 3.28 5.72 3.5 6 3.5H8.2C8.21 3.5 8.22 3.5 8.23 3.5H8.5C8.78 3.5 9 3.28 9 3V0.5C9 0.23 8.78 0 8.5 0C8.22 0 8 0.23 8 0.5V1.65C6.92 0.32 5.12 -0.3 3.38 0.14L3.38 0.14C2.59 0.35 1.87 0.76 1.29 1.34C0.72 1.93 0.32 2.65 0.13 3.45C-0.07 4.24 -0.04 5.07 0.21 5.85C0.45 6.63 0.91 7.33 1.52 7.87C2.13 8.41 2.88 8.78 3.68 8.93C4.48 9.08 5.31 9 6.08 8.72C6.84 8.43 7.51 7.94 8.02 7.3C8.53 6.66 8.86 5.9 8.96 5.09C9 4.81 8.8 4.56 8.53 4.53C8.26 4.49 8.01 4.68 7.97 4.96C7.89 5.59 7.64 6.18 7.24 6.68C6.84 7.18 6.32 7.56 5.73 7.78C5.13 8 4.49 8.06 3.86 7.94C3.24 7.83 2.66 7.54 2.18 7.12C1.7 6.7 1.35 6.16 1.16 5.55C0.97 4.95 0.95 4.3 1.1 3.68C1.25 3.06 1.56 2.5 2.01 2.05C2.45 1.59 3.01 1.27 3.63 1.11" fill="currentColor"/></g>
+<g id="g-circle-check"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.67 1.33C3.72 1.33 1.33 3.72 1.33 6.67C1.33 9.61 3.72 12 6.67 12C9.61 12 12 9.61 12 6.67C12 3.72 9.61 1.33 6.67 1.33ZM0 6.67C0 2.98 2.98 0 6.67 0C10.35 0 13.33 2.98 13.33 6.67C13.33 10.35 10.35 13.33 6.67 13.33C2.98 13.33 0 10.35 0 6.67ZM9.14 4.86C9.4 5.12 9.4 5.54 9.14 5.8L6.47 8.47C6.21 8.73 5.79 8.73 5.53 8.47L4.2 7.14C3.93 6.88 3.93 6.46 4.2 6.2C4.46 5.93 4.88 5.93 5.14 6.2L6 7.06L8.2 4.86C8.46 4.6 8.88 4.6 9.14 4.86Z" fill="#37B24D"/></g>
+<g id="g-eye"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.8 6.67C3.88 10.11 6.34 11.67 9.17 11.67C11.99 11.67 14.45 10.11 16.53 6.67C14.45 3.22 11.99 1.67 9.17 1.67C6.34 1.67 3.88 3.22 1.8 6.67ZM0.11 6.25C2.42 2.21 5.43 0 9.17 0C12.9 0 15.91 2.21 18.22 6.25C18.37 6.51 18.37 6.82 18.22 7.08C15.91 11.13 12.9 13.33 9.17 13.33C5.43 13.33 2.42 11.13 0.11 7.08C-0.04 6.82 -0.04 6.51 0.11 6.25ZM9.17 5.83C8.71 5.83 8.33 6.21 8.33 6.67C8.33 7.13 8.71 7.5 9.17 7.5C9.63 7.5 10 7.13 10 6.67C10 6.21 9.63 5.83 9.17 5.83ZM6.67 6.67C6.67 5.29 7.79 4.17 9.17 4.17C10.55 4.17 11.67 5.29 11.67 6.67C11.67 8.05 10.55 9.17 9.17 9.17C7.79 9.17 6.67 8.05 6.67 6.67Z" fill="#868E96"/></g>
+<g id="g-plus"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C8.55 0 9 0.45 9 1V7H15C15.55 7 16 7.45 16 8C16 8.55 15.55 9 15 9H9V15C9 15.55 8.55 16 8 16C7.45 16 7 15.55 7 15V9H1C0.45 9 0 8.55 0 8C0 7.45 0.45 7 1 7H7V1C7 0.45 7.45 0 8 0Z" fill="#E03131"/></g>
+<g id="g-issues" fill="none"><circle cx="12" cy="12" r="10.5" stroke="#FA5252" stroke-opacity="0.2" stroke-width="3"/><path d="M22.5 12C22.5 6.2 17.8 1.5 12 1.5C6.2 1.5 1.5 6.2 1.5 12C1.5 17.8 6.2 22.5 12 22.5" stroke="#FA5252" stroke-width="3" stroke-linecap="round"/></g>
+<g id="g-minimize-cur" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9h4V5"/><path d="M3 3l6 6"/><path d="M5 15h4v4"/><path d="M3 21l6-6"/><path d="M19 9h-4V5"/><path d="M21 3l-6 6"/><path d="M19 15h-4v4"/><path d="M21 21l-6-6"/></g>
+<g id="g-plus-stroke" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></g>
+<g id="g-minus-stroke" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/></g>
+<g id="g-x-stroke" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></g>
+<g id="g-gotofield" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v16"/><path d="M9 12h11"/><path d="M15 7l5 5-5 5"/></g>
+<g id="g-chev-left-stroke" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></g>
+<g id="g-chev-right-stroke" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></g>
+</defs>
+</svg>
+<div class="page">
+<aside class="sidebar">
+<div class="sidebar__top">
+<button class="actionicon" aria-label="Expand sidebar">
+<span class="ico" style="width:20px;height:20px">
+<i class="lf" style="inset:12.5%"><svg viewBox="0 0 15 15" preserveAspectRatio="none"><use href="#g-sidebar-expand"/></svg></i>
+</span>
+</button>
+</div>
+<div class="sidebar__mid">
+<div class="sidebar__midtop">
+<button class="navlink navlink--active" aria-label="Clients" aria-current="page">
+<span class="ico" style="width:20px;height:20px">
+<i class="lf" style="inset:8.33%"><svg viewBox="0 0 16.6667 16.6667" preserveAspectRatio="none"><use href="#g-users"/></svg></i>
+</span>
+</button>
+</div>
+<div class="sidebar__bottom">
+<button class="navlink navlink--default" aria-label="Account">
+<span class="ico" style="width:20px;height:20px">
+<i class="lf" style="inset:8.33% 20.83%"><svg viewBox="0 0 11.6667 16.6667" preserveAspectRatio="none"><use href="#g-user"/></svg></i>
+</span>
+</button>
+</div>
+</div>
+<button class="sidebar__avatarbtn" aria-label="Sam Coleman">
+<span class="avatar">SC</span>
+</button>
+</aside>
+<div class="body">
+<div class="chrome">
+<header class="topbar">
+<div class="topbar__left">
+<button class="actionicon actionicon--outlined" aria-label="Back">
+<span class="ico" style="width:20px;height:20px">
+<i class="lf" style="inset:20.83% 33.33%"><svg viewBox="0 0 6.66667 11.6667" preserveAspectRatio="none"><use href="#g-chevron-left"/></svg></i>
+</span>
+</button>
+<nav class="crumb" aria-label="Client">
+<p class="t-semi-lg" style="color:var(--text-title-text)">Christopher Doe</p>
+</nav>
+<span class="badge badge--info t-med-xs">Preparing return</span>
+</div>
+<div class="topbar__slot"></div>
+</header>
+</div>
+<div class="content">
+<nav class="childnav" aria-label="Return sections">
+<div class="tabs" role="tablist">
+<button class="tab t-med-sm" role="tab" aria-selected="false">Snapshot</button>
+<button class="tab t-med-sm" role="tab" aria-selected="true">Tax return</button>
+<button class="tab t-med-sm" role="tab" aria-selected="false">Tab 3</button>
+<button class="tab t-med-sm" role="tab" aria-selected="false">Tab 4</button>
+</div>
+<div class="childnav__right">
+<label class="searchpill">
+<span class="ico" style="width:20px;height:20px">
+<i class="lf" style="inset:8.33%"><svg viewBox="0 0 16.6667 16.6667" preserveAspectRatio="none"><use href="#g-search"/></svg></i>
+</span>
+<input class="t-reg-md" type="text" placeholder="Search within this return" aria-label="Search within this return">
+</label>
+<button class="btn-lg btn-lg--outlined">
+<span class="iconwrap20">
+<span class="ico" style="width:24px;height:24px">
+<i class="lf" style="inset:16.67% 12.5% 12.5% 12.5%"><svg viewBox="0 0 18 17" preserveAspectRatio="none"><use href="#g-message2"/></svg></i>
+</span>
+</span>
+<span class="t-med-md">Return notes</span>
+</button>
+<button class="btn-lg btn-lg--outlined">
+<span class="iconwrap20">
+<span class="ico" style="width:24px;height:24px">
+<i class="lf" style="inset:12.5%"><svg viewBox="0 0 18 18" preserveAspectRatio="none"><use href="#g-maximize"/></svg></i>
+</span>
+</span>
+<span class="t-med-md">Form comparison mode</span>
+</button>
+</div>
+</nav>
+<div class="layout">
+<div class="col-left">
+<div class="actionmenu">
+<button class="btn-year">
+<span class="t-med-sm">TY 2025</span>
+<span class="ico" style="width:16px;height:16px">
+<i class="lf" style="inset:33.33% 20.83%"><svg viewBox="0 0 14 8" preserveAspectRatio="none"><use href="#g-chevron-down"/></svg></i>
+</span>
+</button>
+<button class="actionicon actionicon--outlined" aria-label="List view">
+<span class="ico" style="width:20px;height:20px">
+<i class="lf" style="inset:12.5% 8.33%"><svg viewBox="0 0 16.6667 15" preserveAspectRatio="none"><use href="#g-list-details"/></svg></i>
+</span>
+</button>
+<button class="actionicon" aria-label="Collapse navigation">
+<span class="ico" style="width:20px;height:20px">
+<i class="lf" style="inset:12.5%"><svg viewBox="0 0 15 15" preserveAspectRatio="none"><use href="#g-sidebar-collapse"/></svg></i>
+</span>
+</button>
+</div>
+<nav class="navigation" aria-label="Return navigation">
+<div class="category category--gap1" data-category>
+<button class="cattitle" data-cat-toggle aria-expanded="true">
+<span class="ico cat-chev" style="width:12px;height:12px">
+<i class="lf" style="inset:33.33% 20.83%"><svg viewBox="0 0 14 8" preserveAspectRatio="none"><use href="#g-chevron-down"/></svg></i>
+</span>
+<span class="cattitle__group">
+<span class="cattitle__name t-semi-sm">Client info</span>
+<span class="cattitle__count t-reg-xs">7/7</span>
+</span>
+<span class="ico" style="width:16px;height:16px">
+<i class="lf" style="inset:25% 12.5% 25% 16.67%"><svg viewBox="0 0 11.3333 8" preserveAspectRatio="none"><use href="#g-check"/></svg></i>
+</span>
+</button>
+<div class="subcats subcats--gap1" data-cat-body>
+<button class="subcat"><span class="subcat__body"><span class="subcat__label t-reg-sm">Taxpayer</span><b data-i="g-check|25% 12.5% 25% 16.67%|0 0 11.3333 8|16|"></b></span></button>
+<button class="subcat"><span class="subcat__body"><span class="subcat__label t-reg-sm">Spouse</span><b data-i="g-check|25% 12.5% 25% 16.67%|0 0 11.3333 8|16|"></b></span></button>
+<button class="subcat"><span class="subcat__body"><span class="subcat__label t-reg-sm">Filing status</span><b data-i="g-check|25% 12.5% 25% 16.67%|0 0 11.3333 8|16|"></b></span></button>
+<button class="subcat"><span class="subcat__body"><span class="subcat__label t-reg-sm">Residency</span><b data-i="g-check|25% 12.5% 25% 16.67%|0 0 11.3333 8|16|"></b></span></button>
+<button class="subcat"><span class="subcat__body"><span class="subcat__label t-reg-sm">Dependents</span><b data-i="g-check|25% 12.5% 25% 16.67%|0 0 11.3333 8|16|"></b></span></button>
+<button class="subcat"><span class="subcat__body"><span class="subcat__label t-reg-sm">Household</span><b data-i="g-check|25% 12.5% 25% 16.67%|0 0 11.3333 8|16|"></b></span></button>
+<button class="subcat"><span class="subcat__body"><span class="subcat__label t-reg-sm">Income types</span><b data-i="g-check|25% 12.5% 25% 16.67%|0 0 11.3333 8|16|"></b></span></button>
+</div>
+</div>
+<div class="category" data-category>
+<button class="cattitle" data-cat-toggle aria-expanded="true">
+<span class="ico cat-chev" style="width:12px;height:12px">
+<i class="lf" style="inset:33.33% 20.83%"><svg viewBox="0 0 14 8" preserveAspectRatio="none"><use href="#g-chevron-down"/></svg></i>
+</span>
+<span class="cattitle__group">
+<span class="cattitle__name t-semi-sm">Income</span>
+<span class="cattitle__count t-reg-xs">5/10</span>
+</span>
+<span class="ico" style="width:16px;height:16px">
+<i class="lf" style="inset:8.2% 8.39% 16.67% 8.3%"><svg viewBox="0 0 13.3287 12.0212" preserveAspectRatio="none"><use href="#g-alert-triangle"/></svg></i>
+</span>
+</button>
+<div class="subcats" data-cat-body>
+<button class="subcat subcat--active" aria-current="page">
+<span class="subcat__body">
+<span class="subcat__label t-semi-sm">Wages</span>
+<b data-i="g-alert-triangle|8.2% 8.39% 16.67% 8.3%|0 0 13.3287 12.0212|16|"></b>
+</span>
+<span class="subcat__caption t-reg-xs">W-2</span>
+</button>
+<button class="subcat"><span class="subcat__body"><span class="subcat__label t-reg-sm">Self-employment</span></span><span class="subcat__caption t-reg-xs">Schedule C</span></button>
+<button class="subcat"><span class="subcat__body"><span class="subcat__label t-reg-sm">Interest</span><b data-i="g-alert-triangle|8.2% 8.39% 16.67% 8.3%|0 0 13.3287 12.0212|16|"></b></span><span class="subcat__caption t-reg-xs">1099-INT, 1099-OID</span></button>
+<button class="subcat"><span class="subcat__body"><span class="subcat__label t-reg-sm">Dividends</span><b data-i="g-check|25% 12.5% 25% 16.67%|0 0 11.3333 8|16|"></b></span><span class="subcat__caption t-reg-xs">1099-DIV</span></button>
+<button class="subcat"><span class="subcat__body" style="align-items:baseline"><span class="subcat__label t-reg-sm">Capital gains</span><b data-i="g-check|25% 12.5% 25% 16.67%|0 0 11.3333 8|16|"></b></span><span class="subcat__caption t-reg-xs">Schedule D, 1099-B, 1099-DA</span></button>
+<button class="subcat"><span class="subcat__body"><span class="subcat__label t-reg-sm">Real estate sales</span><b data-i="g-check|25% 12.5% 25% 16.67%|0 0 11.3333 8|16|"></b></span><span class="subcat__caption t-reg-xs">1099-S</span></button>
+<button class="subcat"><span class="subcat__body"><span class="subcat__label t-reg-sm">Retirement distributions</span><b data-i="g-check|25% 12.5% 25% 16.67%|0 0 11.3333 8|16|"></b></span><span class="subcat__caption t-reg-xs">1099-R</span></button>
+<button class="subcat"><span class="subcat__body"><span class="subcat__label t-reg-sm">Passthrough income</span><b data-i="g-check|25% 12.5% 25% 16.67%|0 0 11.3333 8|16|"></b></span><span class="subcat__caption t-reg-xs">Schedule K-1</span></button>
+<button class="subcat"><span class="subcat__body"><span class="subcat__label t-reg-sm">Social Security benefits </span></span><span class="subcat__caption t-reg-xs">SSA-1099</span></button>
+<button class="subcat"><span class="subcat__body"><span class="subcat__label t-reg-sm">Rental &amp; royalty income </span></span><span class="subcat__caption t-reg-xs">Schedule E</span></button>
+</div>
+</div>
+<div class="category" data-category>
+<button class="cattitle" data-cat-toggle aria-expanded="true">
+<span class="ico cat-chev" style="width:12px;height:12px">
+<i class="lf" style="inset:33.33% 20.83%"><svg viewBox="0 0 14 8" preserveAspectRatio="none"><use href="#g-chevron-down"/></svg></i>
+</span>
+<span class="cattitle__group">
+<span class="cattitle__name t-semi-sm">Other income</span>
+<span class="cattitle__count t-reg-xs">0/12</span>
+</span>
+</button>
+<div class="subcats" data-cat-body>
+<button class="subcat"><span class="subcat__body"><span class="subcat__label t-reg-sm">Unemployment compensation</span></span><span class="subcat__caption t-reg-xs">1099-G</span></button>
+<button class="subcat"><span class="subcat__body"><span class="subcat__label t-reg-sm">State &amp; local tax refunds</span></span><span class="subcat__caption t-reg-xs">1099-G</span></button>
+<button class="subcat"><span class="subcat__body"><span class="subcat__label t-reg-sm">Alimony received</span></span></button>
+<button class="subcat"><span class="subcat__body" style="align-items:baseline"><span class="subcat__label t-reg-sm">Gambling winnings</span></span><span class="subcat__caption t-reg-xs">W-2G</span></button>
+<button class="subcat"><span class="subcat__body"><span class="subcat__label t-reg-sm">Cancellation of debt</span></span><span class="subcat__caption t-reg-xs">1099-C</span></button>
+<button class="subcat"><span class="subcat__body"><span class="subcat__label t-reg-sm">Digital assets received as income</span></span></button>
+<button class="subcat"><span class="subcat__body"><span class="subcat__label t-reg-sm">Prizes &amp; awards</span></span><span class="subcat__caption t-reg-xs">1099-MISC</span></button>
+<button class="subcat"><span class="subcat__body"><span class="subcat__label t-reg-sm">Jury duty pay</span></span></button>
+<button class="subcat"><span class="subcat__body"><span class="subcat__label t-reg-sm">Hobby income</span></span><span class="subcat__caption t-reg-xs">1099-MISC, 1099-K</span></button>
+<button class="subcat"><span class="subcat__body"><span class="subcat__label t-reg-sm">HSA distributions</span></span><span class="subcat__caption t-reg-xs">Form 8889</span></button>
+<button class="subcat"><span class="subcat__body"><span class="subcat__label t-reg-sm">Digital asset sales</span></span></button>
+<button class="subcat" style="padding-bottom:var(--spacing-xs)"><span class="subcat__body"><span class="subcat__label t-reg-sm">Medicaid waiver payments</span></span><span class="subcat__caption t-reg-xs">W-2, 1099-MISC</span></button>
+</div>
+</div>
+</nav>
+</div>
+<div class="col-right">
+<div class="rheader">
+<div class="rheader__left">
+<p class="t-semi-lg" style="color:var(--text-title-text);white-space:nowrap">Tax year 2025</p>
+</div>
+</div>
+<nav class="crumbs" aria-label="Breadcrumb">
+<span class="crumbs__item t-semi-md" style="color:var(--text-dimmed-text)">Income</span>
+<span class="crumbs__sep t-reg-lg">/</span>
+<span class="crumbs__item t-semi-md" style="color:var(--text-title-text)">Wages (W-2)</span>
+</nav>
+<section class="formcard" data-card>
+<div class="formcard__top">
+<button class="formcard__chev" data-card-toggle aria-expanded="true" aria-label="Collapse W-2">
+<span class="ico" style="width:24px;height:24px">
+<i class="lf" style="inset:33.33% 20.83%"><svg viewBox="0 0 14 8" preserveAspectRatio="none"><use href="#g-chevron-down"/></svg></i>
+</span>
+</button>
+<div class="formcard__right">
+<div class="formcard__header">
+<div class="formcard__titlecol">
+<div class="formcard__titlerow">
+<p class="formcard__title t-semi-xl">W-2 (Christopher Doe)</p>
+<span class="badge badge--error t-med-xs">1 error</span>
+</div>
+<p class="formcard__sub t-reg-md">Atlantic Software Inc</p>
+</div>
+<div class="formcard__actions">
+<div class="switchrow">
+<span class="switchrow__label t-reg-sm">Show field sources</span>
+<span class="switch" role="switch" aria-checked="false"><span class="switch__thumb"></span></span>
+</div>
+<button class="btn-sm">
+<span class="ico" style="width:16px;height:16px">
+<i class="lf" style="inset:8.33% 16.67%"><svg viewBox="0 0 10.6667 13.3333" preserveAspectRatio="none"><use href="#g-file-text"/></svg></i>
+</span>
+<span class="t-med-sm">Open Form W-2</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="sections">
+<div class="section">
+<div class="line">
+<div class="line__label"><p class="t-med-md">Employer identification number (EIN)</p></div>
+<div class="line__field"><div class="input"><input class="t-reg-md" value="12-3857462" aria-label="Employer identification number (EIN)"><button type="button" class="input__suffix t-reg-xs" data-map1040>Map to 1040</button></div><span class="fieldsource t-reg-xs">W-2 uploaded by tax filer</span></div>
+</div>
+<div class="line">
+<div class="line__label"><p class="t-med-md">Employer&rsquo;s name</p></div>
+<div class="line__field"><div class="input"><input class="t-reg-md" value="Atlantic Software Inc" aria-label="Employer's name"><button type="button" class="input__suffix t-reg-xs" data-map1040>Map to 1040</button></div><span class="fieldsource t-reg-xs">Was Acme LLC, entered by client. Sabrina C. updated it 2 Apr, 4:12 PM <button type="button" class="fieldsource__revert t-reg-xs"><b data-i="g-reload|16.67%|0 0 9 9|12|"></b>Revert</button></span></div>
+</div>
+<div class="line">
+<div class="line__label"><p class="t-med-md">Employer's street address</p></div>
+<div class="line__field"><div class="input"><input class="t-reg-md" value="123 Oak Street" aria-label="Employer's street address"><button type="button" class="input__suffix t-reg-xs" data-map1040>Map to 1040</button></div><span class="fieldsource t-reg-xs">Entered manually by tax filer</span></div>
+</div>
+<div class="line">
+<div class="line__label"><p class="t-med-md">Employer's apartment/suite number</p></div>
+<div class="line__field"><div class="input"><input class="t-reg-md" value="" aria-label="Employer's apartment/suite number"><button type="button" class="input__suffix t-reg-xs" data-map1040>Map to 1040</button></div><span class="fieldsource t-reg-xs">Entered manually by tax filer</span></div>
+</div>
+<div class="line">
+<div class="line__label"><p class="t-med-md">Employer&rsquo;s city</p></div>
+<div class="line__field"><div class="input"><input class="t-reg-md" value="Boulder" aria-label="Employer's city"><button type="button" class="input__suffix t-reg-xs" data-map1040>Map to 1040</button></div><span class="fieldsource t-reg-xs">W-2 uploaded by tax filer</span></div>
+</div>
+<div class="line">
+<div class="line__label"><p class="t-med-md">Employer&rsquo;s state</p></div>
+<div class="line__field">
+<div class="input">
+<input class="t-reg-md" value="Colorado" aria-label="Employer's state">
+<span class="ico" style="width:20px;height:20px">
+<i class="lf" style="inset:33.33% 20.83%"><svg viewBox="0 0 14 8" preserveAspectRatio="none"><use href="#g-chevron-down"/></svg></i>
+</span>
+<button type="button" class="input__suffix t-reg-xs" data-map1040>Map to 1040</button></div>
+<span class="fieldsource t-reg-xs">Entered manually by tax filer</span></div>
+</div>
+<div class="line">
+<div class="line__label"><p class="t-med-md">Employer&rsquo;s ZIP code</p></div>
+<div class="line__field"><div class="input"><input class="t-reg-md" value="54321" aria-label="Employer's ZIP code"><button type="button" class="input__suffix t-reg-xs" data-map1040>Map to 1040</button></div><span class="fieldsource t-reg-xs">Entered manually by tax filer</span></div>
+</div>
+<div class="divider"></div>
+</div>
+<div class="sectionhead t-semi-lg">Boxes 1-11</div>
+<div class="section">
+<div class="line">
+<div class="line__label"><p class="t-med-md">1: Wages, salaries, tips</p></div>
+<div class="line__field">
+<div class="input">
+<span class="ico glyph-dollar" style="width:20px;height:20px">
+<i class="lf" style="inset:8.33% 25%"><svg viewBox="0 0 10 16.6667" preserveAspectRatio="none"><use href="#g-dollar"/></svg></i>
+</span>
+<input class="t-reg-md" value="285,000" aria-label="Box 1: Wages, salaries, tips">
+<button type="button" class="input__suffix t-reg-xs" data-map1040>Map to 1040</button>
+</div>
+<span class="fieldsource t-reg-xs">W-2 uploaded by tax filer</span></div>
+</div>
+<div class="line">
+<div class="line__label"><p class="t-med-md">3: Social security wages</p></div>
+<div class="line__field"><div class="input"><b data-i="g-dollar|8.33% 25%|0 0 10 16.6667|20|glyph-dollar"></b><input class="t-reg-md" value="160,200" aria-label="Box 3: Social security wages"><button type="button" class="input__suffix t-reg-xs" data-map1040>Map to 1040</button></div><span class="fieldsource t-reg-xs">W-2 uploaded by tax filer</span></div>
+</div>
+<div class="line line--error">
+<div class="fields">
+<div class="line__label"><p class="t-med-md">4: Social security tax withheld</p></div>
+<div class="line__field">
+<div class="input">
+<b data-i="g-dollar|8.33% 25%|0 0 10 16.6667|20|glyph-dollar"></b>
+<input class="t-reg-md" value="508" aria-label="Box 4: Social security tax withheld">
+<button type="button" class="input__suffix t-reg-xs" data-map1040>Map to 1040</button></div>
+<span class="fieldsource t-reg-xs">W-2 uploaded by tax filer</span></div>
+<div class="rowactions">
+<div class="rowaction">
+<span class="actionicon">
+<b data-i="g-file-search|8.33% 8.33% 4.17% 16.67%|0 0 15 17.5|20|"></b>
+</span>
+<span class="rowaction__text t-reg-sm">Compare on W-2</span>
+</div>
+<div class="rowaction" style="gap:8px">
+<span class="vdivider"></span>
+<span class="actionicon">
+<b data-i="g-message2-error|16.67% 12.5% 12.5% 12.5%|0 0 15 14.1667|20|"></b>
+</span>
+</div>
+</div>
+</div>
+<div class="message">
+<p class="message__text t-reg-sm"><b>Social Security tax is lower than expected. </b>Box 4 is $508. Social Security tax is 6.2% of box 3, so 82,000 should give 5,084.00. Boxes 5 and 6 agree with box 3, so box 4 is the value to check. A misplaced decimal is the usual cause on a scanned document.</p>
+<div class="chips">
+<button class="chip t-med-xs">
+<b data-i="g-reload|12.49% 12.5% 12.5% 12.5%|0 0 8.99951 9.00204|12|"></b>
+<span>Check again</span>
+</button>
+<button class="chip t-med-xs">
+<b data-i="g-check-error|25% 12.5% 25% 16.67%|0 0 8.5 6|12|"></b>
+<span>This is correct</span>
+</button>
+</div>
+</div>
+</div>
+<div class="line">
+<div class="line__label"><p class="t-med-md">5: Medicare wages and tips</p></div>
+<div class="line__field"><div class="input"><b data-i="g-dollar|8.33% 25%|0 0 10 16.6667|20|glyph-dollar"></b><input class="t-reg-md" value="285,000" aria-label="Box 5: Medicare wages and tips"><button type="button" class="input__suffix t-reg-xs" data-map1040>Map to 1040</button></div><span class="fieldsource t-reg-xs">W-2 uploaded by tax filer</span></div>
+</div>
+<div class="line">
+<div class="line__label"><p class="t-med-md">6: Medicare tax withheld</p></div>
+<div class="line__field"><div class="input"><b data-i="g-dollar|8.33% 25%|0 0 10 16.6667|20|glyph-dollar"></b><input class="t-reg-md" value="4,132" aria-label="Box 6: Medicare tax withheld"><button type="button" class="input__suffix t-reg-xs" data-map1040>Map to 1040</button></div><span class="fieldsource t-reg-xs">W-2 uploaded by tax filer</span></div>
+</div>
+<div class="line">
+<div class="line__label"><p class="t-med-md">7: Social security tips</p></div>
+<div class="line__field"><div class="input"><b data-i="g-dollar|8.33% 25%|0 0 10 16.6667|20|glyph-dollar"></b><input class="t-reg-md" value="" aria-label="Box 7: Social security tips"><button type="button" class="input__suffix t-reg-xs" data-map1040>Map to 1040</button></div><span class="fieldsource t-reg-xs">W-2 uploaded by tax filer</span></div>
+</div>
+<div class="line">
+<div class="line__label"><p class="t-med-md">8: Allocated tips</p></div>
+<div class="line__field"><div class="input"><b data-i="g-dollar|8.33% 25%|0 0 10 16.6667|20|glyph-dollar"></b><input class="t-reg-md" value="" aria-label="Box 8: Allocated tips"><button type="button" class="input__suffix t-reg-xs" data-map1040>Map to 1040</button></div><span class="fieldsource t-reg-xs">W-2 uploaded by tax filer</span></div>
+</div>
+<div class="line">
+<div class="line__label"><p class="t-med-md">10: Dependent care benefits</p></div>
+<div class="line__field"><div class="input"><b data-i="g-dollar|8.33% 25%|0 0 10 16.6667|20|glyph-dollar"></b><input class="t-reg-md" value="" aria-label="Box 10: Dependent care benefits"><button type="button" class="input__suffix t-reg-xs" data-map1040>Map to 1040</button></div><span class="fieldsource t-reg-xs">W-2 uploaded by tax filer</span></div>
+</div>
+<div class="line">
+<div class="line__label"><p class="t-med-md">11: Nonqualified plans</p></div>
+<div class="line__field"><div class="input"><b data-i="g-dollar|8.33% 25%|0 0 10 16.6667|20|glyph-dollar"></b><input class="t-reg-md" value="" aria-label="Box 11: Nonqualified plans"><button type="button" class="input__suffix t-reg-xs" data-map1040>Map to 1040</button></div><span class="fieldsource t-reg-xs">W-2 uploaded by tax filer</span></div>
+</div>
+</div>
+</div>
+</section>
+<section class="formcard" data-card>
+<div class="formcard__top">
+<button class="formcard__chev" data-card-toggle aria-expanded="true" aria-label="Collapse additional W-2">
+<span class="ico" style="width:24px;height:24px">
+<i class="lf" style="inset:33.33% 20.83%"><svg viewBox="0 0 14 8" preserveAspectRatio="none"><use href="#g-chevron-down"/></svg></i>
+</span>
+</button>
+<div class="formcard__right">
+<div class="formcard__header">
+<div class="formcard__titlecol">
+<div class="formcard__titlerow">
+<p class="formcard__title t-semi-xl">Additional W-2 (Christopher Doe)</p>
+<span class="badge badge--error t-med-xs">1 missing field</span>
+</div>
+<p class="formcard__sub t-reg-md">Atlantic Software Inc</p>
+</div>
+<div class="formcard__actions">
+<div class="switchrow">
+<span class="switchrow__label t-reg-sm">Show field sources</span>
+<span class="switch" role="switch" aria-checked="false"><span class="switch__thumb"></span></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sections">
+<div class="section">
+<div class="line line--error">
+<div class="fields">
+<div class="line__label"><p class="t-med-md">Overtime pay</p></div>
+<div class="line__field">
+<div class="input">
+<b data-i="g-dollar|8.33% 25%|0 0 10 16.6667|20|glyph-dollar"></b>
+<input class="t-reg-md" value="" aria-label="Overtime pay">
+<button type="button" class="input__suffix t-reg-xs" data-map1040>Map to 1040</button></div>
+</div>
+</div>
+<div class="message">
+<p class="message__text t-reg-sm">This field is required. Qualified overtime premium included in box 1. Enter only the FLSA premium, the half above the regular rate. Enter 0 if none.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<section class="takeover" id="takeover" aria-hidden="true">
+<div class="tk__head">
+<p class="t-semi-lg" style="color:var(--text-title-text)">Form comparison mode</p>
+<div class="tk__headright">
+<button class="btn-lg btn-lg--outlined">
+<b data-i="g-message2|16.67% 12.5% 12.5% 12.5%|0 0 18 17|20|"></b>
+<span class="t-med-md">Return notes</span>
+</button>
+<button class="btn-lg btn-lg--brand" data-tk-exit>
+<b data-i="g-minimize-cur|0|0 0 24 24|20|"></b>
+<span class="t-med-md">Exit form comparison mode</span>
+</button>
+</div>
+</div>
+<div class="tk__cols">
+<div class="tk__panel tk__form" data-tk-form></div>
+<div class="tk__panel tk__pdf">
+<div class="tk__pdfbar">
+<div class="tk__select" data-tk-select>
+<button class="tk__selectbtn t-reg-sm" data-tk-selectbtn aria-expanded="false">
+<span data-tk-selectlabel>W-2 (Christopher Doe)</span>
+<b data-i="g-chevron-down|33.33% 20.83%|0 0 14 8|16|"></b>
+</button>
+<div class="tk__menu" data-tk-menu hidden>
+<button class="tk__opt t-reg-md">W-2 (Christopher Doe)</button>
+<button class="tk__opt t-reg-md">W-2 (Janice Doe)</button>
+<button class="tk__opt t-reg-md">1099-INT (Christopher Doe)</button>
+</div>
+</div>
+<div class="tk__zoom">
+<button class="actionicon" aria-label="Zoom out" data-tk-zoom="-1">
+<b data-i="g-minus-stroke|0|0 0 24 24|20|"></b>
+</button>
+<span class="tk__zoomval t-med-sm" data-tk-zoomlabel>175%</span>
+<button class="actionicon" aria-label="Zoom in" data-tk-zoom="1">
+<b data-i="g-plus-stroke|0|0 0 24 24|20|"></b>
+</button>
+</div>
+</div>
+<div class="tk__nav">
+<button class="btn-sm btn-sm--brand" data-tk-step="-1">
+<b data-i="g-chev-left-stroke|0|0 0 24 24|16|"></b>
+<span class="t-med-sm">Previous field</span>
+</button>
+<button class="btn-sm btn-sm--brand" data-tk-step="1" data-tk-next>
+<span class="t-med-sm" data-tk-nextlabel>Next field</span>
+<b data-i="g-chev-right-stroke|0|0 0 24 24|16|tk__chevr"></b>
+</button>
+</div>
+<div class="tk__viewer" data-tk-viewer>
+<div class="tk__page" data-tk-page>
+<svg class="tk__scan" viewBox="0 0 1000 1034" role="img" aria-label="Form W-2, schematic rendering" xmlns="http://www.w3.org/2000/svg"><style>.tk__scan{background:#fff}rect{fill:none;stroke:#adb5bd;stroke-width:1}rect.outer{stroke:#495057;stroke-width:1.5}text{font-family:Geist,system-ui,sans-serif}text.l{font-size:8px;fill:#868e96}text.v{font-size:13px;fill:#212529}text.a{font-size:12px;fill:#212529;font-weight:500}text.yr{font-size:26px;fill:#212529;font-weight:700}text.fm{font-size:22px;fill:#212529;font-weight:700}/* Icon defs are currentColor now (the duplicate clones were 12KB), so the
+places that relied on a baked fill set the colour explicitly. */
+.rowactions .rowaction{color:var(--text-error-text);}
+.chip{color:var(--text-error-text);}
+
+
+</style><rect x="0" y="0" width="1000" height="1034" fill="#fff" stroke="none"/><rect x="34.0" y="74.4" width="141.0" height="27.9"/>
+<text class="l" x="38.0" y="83.4">b  Employer identification number (EIN)</text>
+<text class="v" x="170.0" y="97.4" text-anchor="end">12-3857462</text>
+<rect x="175.0" y="39.3" width="140.0" height="30.0"/>
+<text class="l" x="179.0" y="48.3">1  Wages, tips, other compensation</text>
+<text class="v" x="310.0" y="64.3" text-anchor="end">208,732.47</text>
+<rect x="315.0" y="39.3" width="185.0" height="30.0"/>
+<text class="l" x="319.0" y="48.3">2  Federal income tax withheld</text>
+<text class="v" x="495.0" y="64.3" text-anchor="end">40,002.24</text>
+<rect x="175.0" y="74.4" width="140.0" height="27.9"/>
+<text class="l" x="179.0" y="83.4">3  Social security wages</text>
+<text class="v" x="310.0" y="97.4" text-anchor="end">176,100.00</text>
+<rect x="315.0" y="74.4" width="185.0" height="27.9"/>
+<text class="l" x="319.0" y="83.4">4  Social security tax withheld</text>
+<text class="v" x="495.0" y="97.4" text-anchor="end">10,918.20</text>
+<rect x="175.0" y="105.5" width="140.0" height="29.0"/>
+<text class="l" x="179.0" y="114.5">5  Medicare wages and tips</text>
+<text class="v" x="310.0" y="129.4" text-anchor="end">239,732.47</text>
+<rect x="315.0" y="105.5" width="185.0" height="29.0"/>
+<text class="l" x="319.0" y="114.5">6  Medicare tax withheld</text>
+<text class="v" x="495.0" y="129.4" text-anchor="end">3,833.71</text>
+<rect x="34.0" y="222.3" width="141.0" height="30.0"/>
+<text class="l" x="38.0" y="231.3">7  Social security tips</text>
+<rect x="175.0" y="222.3" width="140.0" height="30.0"/>
+<text class="l" x="179.0" y="231.3">8  Allocated tips</text>
+<rect x="34.0" y="255.4" width="141.0" height="33.1"/>
+<text class="l" x="38.0" y="264.4">10  Dependent care benefits</text>
+<rect x="175.0" y="255.4" width="140.0" height="33.1"/>
+<text class="l" x="179.0" y="264.4">11  Nonqualified plans</text>
+<rect x="34.0" y="39.3" width="141.0" height="30.0"/>
+<text class="l" x="38.0" y="48.3">a  Control number</text>
+<text class="v" x="170.0" y="64.3" text-anchor="end">78965325</text>
+<rect x="34.0" y="105.5" width="141.0" height="27.9"/>
+<text class="l" x="38.0" y="114.5">e  Employee's social security number</text>
+<text class="v" x="170.0" y="128.4" text-anchor="end">123-45-6789</text>
+<rect x="34.0" y="138.6" width="466.0" height="75.5"/>
+<text class="l" x="38.0" y="147.6">c  Employer's name, address and ZIP code</text>
+<text class="a" x="40.0" y="164.6">ATLANTIC SOFTWARE INC</text>
+<text class="a" x="40.0" y="181.6">56 MONTAGUE STREET</text>
+<text class="a" x="40.0" y="198.6">BROOKLYN, NY 11201</text>
+<rect x="34.0" y="299.9" width="466.0" height="72.4"/>
+<text class="l" x="38.0" y="308.9">e  Employee's name, address and ZIP code</text>
+<text class="a" x="40.0" y="325.9">CHRISTOPHER D DOE</text>
+<text class="a" x="40.0" y="342.9">123 OAK AVENUE</text>
+<text class="a" x="40.0" y="359.9">TROY, NY 12180</text>
+<text class="yr" x="40.0" y="424.1">2025</text>
+<text class="fm" x="40.0" y="450.1">W-2</text>
+<text class="l" x="124.0" y="420.1">Wage and Tax Statement</text>
+<text class="l" x="124.0" y="436.1">Copy C — For EMPLOYEE’S RECORDS</text>
+<text class="l" x="124.0" y="452.1">Department of the Treasury — IRS</text>
+<rect x="34.0" y="24.8" width="466.0" height="455.0" class="outer"/><rect x="534.0" y="74.4" width="141.0" height="27.9"/>
+<text class="l" x="538.0" y="83.4">b  Employer identification number (EIN)</text>
+<text class="v" x="670.0" y="97.4" text-anchor="end">12-3857462</text>
+<rect x="675.0" y="39.3" width="140.0" height="30.0"/>
+<text class="l" x="679.0" y="48.3">1  Wages, tips, other compensation</text>
+<text class="v" x="810.0" y="64.3" text-anchor="end">208,732.47</text>
+<rect x="815.0" y="39.3" width="185.0" height="30.0"/>
+<text class="l" x="819.0" y="48.3">2  Federal income tax withheld</text>
+<text class="v" x="995.0" y="64.3" text-anchor="end">40,002.24</text>
+<rect x="675.0" y="74.4" width="140.0" height="27.9"/>
+<text class="l" x="679.0" y="83.4">3  Social security wages</text>
+<text class="v" x="810.0" y="97.4" text-anchor="end">176,100.00</text>
+<rect x="815.0" y="74.4" width="185.0" height="27.9"/>
+<text class="l" x="819.0" y="83.4">4  Social security tax withheld</text>
+<text class="v" x="995.0" y="97.4" text-anchor="end">10,918.20</text>
+<rect x="675.0" y="105.5" width="140.0" height="29.0"/>
+<text class="l" x="679.0" y="114.5">5  Medicare wages and tips</text>
+<text class="v" x="810.0" y="129.4" text-anchor="end">239,732.47</text>
+<rect x="815.0" y="105.5" width="185.0" height="29.0"/>
+<text class="l" x="819.0" y="114.5">6  Medicare tax withheld</text>
+<text class="v" x="995.0" y="129.4" text-anchor="end">3,833.71</text>
+<rect x="534.0" y="222.3" width="141.0" height="30.0"/>
+<text class="l" x="538.0" y="231.3">7  Social security tips</text>
+<rect x="675.0" y="222.3" width="140.0" height="30.0"/>
+<text class="l" x="679.0" y="231.3">8  Allocated tips</text>
+<rect x="534.0" y="255.4" width="141.0" height="33.1"/>
+<text class="l" x="538.0" y="264.4">10  Dependent care benefits</text>
+<rect x="675.0" y="255.4" width="140.0" height="33.1"/>
+<text class="l" x="679.0" y="264.4">11  Nonqualified plans</text>
+<rect x="534.0" y="39.3" width="141.0" height="30.0"/>
+<text class="l" x="538.0" y="48.3">a  Control number</text>
+<text class="v" x="670.0" y="64.3" text-anchor="end">78965325</text>
+<rect x="534.0" y="105.5" width="141.0" height="27.9"/>
+<text class="l" x="538.0" y="114.5">e  Employee's social security number</text>
+<text class="v" x="670.0" y="128.4" text-anchor="end">123-45-6789</text>
+<rect x="534.0" y="138.6" width="466.0" height="75.5"/>
+<text class="l" x="538.0" y="147.6">c  Employer's name, address and ZIP code</text>
+<text class="a" x="540.0" y="164.6">ATLANTIC SOFTWARE INC</text>
+<text class="a" x="540.0" y="181.6">56 MONTAGUE STREET</text>
+<text class="a" x="540.0" y="198.6">BROOKLYN, NY 11201</text>
+<rect x="534.0" y="299.9" width="466.0" height="72.4"/>
+<text class="l" x="538.0" y="308.9">e  Employee's name, address and ZIP code</text>
+<text class="a" x="540.0" y="325.9">CHRISTOPHER D DOE</text>
+<text class="a" x="540.0" y="342.9">123 OAK AVENUE</text>
+<text class="a" x="540.0" y="359.9">TROY, NY 12180</text>
+<text class="yr" x="540.0" y="424.1">2025</text>
+<text class="fm" x="540.0" y="450.1">W-2</text>
+<text class="l" x="624.0" y="420.1">Wage and Tax Statement</text>
+<text class="l" x="624.0" y="436.1">Copy C — For EMPLOYEE’S RECORDS</text>
+<text class="l" x="624.0" y="452.1">Department of the Treasury — IRS</text>
+<rect x="534.0" y="24.8" width="466.0" height="455.0" class="outer"/></svg>
+<span class="tk__box" data-tk-box hidden></span>
+</div>
+</div>
+</div>
+</div>
+<svg class="tk__wire" data-tk-wire aria-hidden="true"><path data-tk-wirepath fill="none"></path></svg>
+</section>
+</div>
+</div>
+<div class="issuescrim" data-iss-scrim hidden></div>
+<aside class="issues" id="issues" aria-hidden="true" aria-label="Issues to resolve">
+<div class="issues__inner">
+<div class="issues__head">
+<div class="issues__titlerow">
+<p class="t-semi-xl" style="color:var(--text-title-text)">3 issues to resolve</p>
+<button class="actionicon" data-iss-close aria-label="Close issues panel">
+<b data-i="g-x-stroke|0|0 0 24 24|24|"></b>
+</button>
+</div>
+<p class="t-reg-sm" style="color:var(--text-dimmed-text)">Once resolved, you&rsquo;ll be able to move onto reviewing the return.</p>
+</div>
+<div class="issues__list">
+<div class="issuecard">
+<p class="issuecard__eyebrow t-reg-xs">W-2 (Christopher Doe, Atlantic Software Inc)</p>
+<p class="issuecard__title t-semi-md">Social Security tax is lower than expected.</p>
+<p class="issuecard__body t-reg-sm">Box 4 is $508. Social Security tax is 6.2% of box 3, so 82,000 should give 5,084.00. Boxes 5 and 6 agree with box 3, so box 4 is the value to check. A misplaced decimal is the usual cause on a scanned document.</p>
+<button class="chip t-med-xs" data-iss-goto="Box 4: Social security tax withheld">
+<b data-i="g-gotofield|0|0 0 24 24|12|"></b>
+<span>Go to field</span>
+</button>
+</div>
+<div class="issuecard">
+<p class="issuecard__eyebrow t-reg-xs">W-2 (Christopher Doe, Atlantic Software Inc)</p>
+<p class="issuecard__title t-semi-md">Overtime pay</p>
+<p class="issuecard__body t-reg-sm">This field is required. Qualified overtime premium included in box 1. Enter only the FLSA premium, the half above the regular rate. Enter 0 if none.</p>
+<button class="chip t-med-xs" data-iss-goto="Overtime pay">
+<b data-i="g-gotofield|0|0 0 24 24|12|"></b>
+<span>Go to field</span>
+</button>
+</div>
+<div class="issuecard">
+<p class="issuecard__eyebrow t-reg-xs">1099-INT (Christopher Doe, Ally Bank)</p>
+<p class="issuecard__title t-semi-md">Withholding needs a state</p>
+<p class="issuecard__body t-reg-sm">Box 17 shows 412.00 withheld and box 15 is empty. Without a state, this withholding isn&rsquo;t credited on any return. Christopher has New York and California returns.</p>
+<button class="chip t-med-xs" data-iss-goto="" disabled title="The 1099-INT form isn't built in this prototype">
+<b data-i="g-gotofield|0|0 0 24 24|12|"></b>
+<span>Go to field</span>
+</button>
+</div>
+</div>
+<button class="btn-upnext issues__cta" disabled>
+<span class="ico" style="width:24px;height:24px">
+<i class="lf" style="inset:8.33% 16.67%"><svg viewBox="0 0 16 20" preserveAspectRatio="none"><use href="#g-file-text-disabled"/></svg></i>
+</span>
+<span class="t-med-md">Review return</span>
+</button>
+</div>
+</aside>
+<footer class="stickyfooter">
+<div class="footer__left">
+<div class="liab">
+<div class="liab__cell liab__cell--first">
+<span class="liab__k t-med-xs">Federal</span>
+<span class="liab__v--success t-med-md">$9,047</span>
+</div>
+<div class="liab__cell liab__cell--mid">
+<span class="liab__k t-med-xs">NY state</span>
+<span class="liab__v--success t-med-md">$2,691</span>
+</div>
+<div class="liab__cell liab__cell--mid">
+<span class="liab__k t-med-xs">CA state</span>
+<span class="liab__v--neutral t-med-md">$1,367</span>
+</div>
+<div class="liab__cell liab__cell--last">
+<span class="t-med-xs" style="color:var(--text-text)">+2 states</span>
+</div>
+</div>
+<div class="saved">
+<span class="ico" style="width:16px;height:16px">
+<i class="lf" style="inset:8.33%"><svg viewBox="0 0 13.3333 13.3333" preserveAspectRatio="none"><use href="#g-circle-check"/></svg></i>
+</span>
+<span class="saved__text t-med-xs">Auto-saved 1 min ago</span>
+</div>
+</div>
+<button class="btn-lg btn-lg--outlined">
+<span class="ico" style="width:20px;height:20px">
+<i class="lf" style="inset:16.67% 4.17%"><svg viewBox="0 0 18.3333 13.3333" preserveAspectRatio="none"><use href="#g-eye"/></svg></i>
+</span>
+<span class="t-med-md">Preview 1040</span>
+</button>
+<button class="btn-issues">
+<span class="ico" style="width:24px;height:24px">
+<i class="lf" style="inset:0"><svg viewBox="0 0 24 24" preserveAspectRatio="none"><use href="#g-issues"/></svg></i>
+</span>
+<span class="t-med-md">3 issues to resolve</span>
+<span class="ico" style="width:24px;height:24px">
+<i class="lf" style="inset:16.67%"><svg viewBox="0 0 16 16" preserveAspectRatio="none"><use href="#g-plus"/></svg></i>
+</span>
+</button>
+<button class="btn-upnext" disabled>
+<span class="ico" style="width:24px;height:24px">
+<i class="lf" style="inset:8.33% 16.67%"><svg viewBox="0 0 16 20" preserveAspectRatio="none"><use href="#g-file-text-disabled"/></svg></i>
+</span>
+<span class="t-med-md">Review return</span>
+</button>
+</footer>
+</div>
+<script>
+/* 39 icon wrappers were byte-identical apart from five values, so they ship as
+   <b data-i="glyph|inset|viewBox|size|extraClass"> and expand here. */
+document.querySelectorAll('b[data-i]').forEach(function(el){
+var a=el.getAttribute('data-i').split('|');
+var sp=document.createElement('span');
+sp.className='ico'+(a[4]?' '+a[4]:'');
+sp.style.width=sp.style.height=a[3]+'px';
+sp.innerHTML='<i class="lf" style="inset:'+a[1]+'"><svg viewBox="'+a[2]+'" preserveAspectRatio="none"><use href="#'+a[0]+'"/></svg></i>';
+el.replaceWith(sp);
+});
+(function(){
+var root = document.documentElement;
+function syncStickyOffsets(){
+var chrome = document.querySelector('.chrome');
+var nav    = document.querySelector('.childnav');
+if (!chrome || !nav) return;
+var chromeH = chrome.getBoundingClientRect().height;
+var navH    = nav.getBoundingClientRect().height;
+root.style.setProperty('--childnav-top', Math.round(chromeH) + 'px');
+root.style.setProperty('--band-h', Math.round(chromeH + navH) + 'px');
+}
+syncStickyOffsets();
+window.addEventListener('resize', syncStickyOffsets);
+if (document.fonts && document.fonts.ready) {
+document.fonts.ready.then(syncStickyOffsets);
+}
+})();
+var MAP_1040 = {
+'Box 1: Wages, salaries, tips': '1040 line 1a'
+};
+var MAP_1040_FALLBACK = 'Map TBD';
+(function(){
+function close(){
+var open = document.querySelector('.maptip');
+if (open) open.remove();
+}
+document.querySelectorAll('[data-map1040]').forEach(function(btn){
+btn.addEventListener('mousedown', function(e){ e.preventDefault(); });
+btn.addEventListener('click', function(e){
+e.stopPropagation();
+var existing = btn.querySelector('.maptip');
+close();
+if (existing) return;
+var field = btn.closest('.input').querySelector('input');
+var key = field ? field.getAttribute('aria-label') : null;
+var tip = document.createElement('span');
+tip.className = 'maptip t-reg-xs';
+tip.textContent = (key && MAP_1040[key]) || MAP_1040_FALLBACK;
+btn.appendChild(tip);
+});
+});
+document.addEventListener('click', close);
+document.addEventListener('keydown', function(e){
+if (e.key === 'Escape') close();
+});
+})();
+document.querySelectorAll('[role="tab"]').forEach(function(tab){
+tab.addEventListener('click', function(){
+document.querySelectorAll('[role="tab"]').forEach(function(t){
+t.setAttribute('aria-selected','false');
+});
+tab.setAttribute('aria-selected','true');
+});
+});
+document.querySelectorAll('[data-cat-toggle]').forEach(function(btn){
+btn.addEventListener('click', function(){
+var open = btn.getAttribute('aria-expanded') === 'true';
+btn.setAttribute('aria-expanded', String(!open));
+var body = btn.parentElement.querySelector('[data-cat-body]');
+if (body) body.style.display = open ? 'none' : '';
+var chev = btn.querySelector('.cat-chev');
+if (chev){
+chev.style.transition = 'transform .18s ease';
+chev.style.transform = open ? 'rotate(-90deg)' : '';
+}
+});
+});
+var TK = (function(){
+var tk    = document.getElementById('takeover');
+if (!tk) return null;
+var slot  = tk.querySelector('[data-tk-form]');
+var card  = document.querySelector('[data-card]');
+if (card && slot) slot.appendChild(card.cloneNode(true));
+var BOXES = {
+'Employer identification number (EIN)': [3.4, 7.2, 14.1, 2.7],
+"Employer's name":                      [3.4, 13.4, 46.6, 7.3],
+"Employer's street address":            [3.4, 13.4, 46.6, 7.3],
+"Employer's apartment/suite number":    [3.4, 13.4, 46.6, 7.3],
+"Employer's city":                      [3.4, 13.4, 46.6, 7.3],
+"Employer's state":                     [3.4, 13.4, 46.6, 7.3],
+"Employer's ZIP code":                  [3.4, 13.4, 46.6, 7.3],
+'Box 1: Wages, salaries, tips':         [17.5, 3.8, 14.0, 2.9],
+'Box 3: Social security wages':        [17.5, 7.2, 14.0, 2.7],
+'Box 4: Social security tax withheld': [31.5, 7.2, 18.5, 2.7],
+'Box 5: Medicare wages and tips':      [17.5, 10.2, 14.0, 2.8],
+'Box 6: Medicare tax withheld':        [31.5, 10.2, 18.5, 2.8],
+'Box 7: Social security tips':          [3.4, 21.5, 14.1, 2.9],
+'Box 8: Allocated tips':               [17.5, 21.5, 14.0, 2.9],
+'Box 10: Dependent care benefits':      [3.4, 24.7, 14.1, 3.2],
+'Box 11: Nonqualified plans':          [17.5, 24.7, 14.0, 3.2]
+};
+var box    = tk.querySelector('[data-tk-box]');
+var wire   = tk.querySelector('[data-tk-wire]');
+var path   = tk.querySelector('[data-tk-wirepath]');
+var viewer = tk.querySelector('[data-tk-viewer]');
+var page   = tk.querySelector('[data-tk-page]');
+var active = null;   // aria-label of the linked field
+function rows(){
+return [].slice.call(slot.querySelectorAll('.line')).filter(function(r){
+var i = r.querySelector('input');
+return i && BOXES[i.getAttribute('aria-label')];
+});
+}
+function clearWire(){
+path.removeAttribute('d');
+box.hidden = true;
+slot.querySelectorAll('.line.is-linked').forEach(function(r){ r.classList.remove('is-linked'); });
+}
+function drawWire(row){
+var wr = wire.getBoundingClientRect();
+var rr = row.getBoundingClientRect();
+var br = box.getBoundingClientRect();
+if (!br.width) return;
+var x1 = rr.right - wr.left, y1 = rr.top + rr.height / 2 - wr.top;
+var x2 = br.left  - wr.left, y2 = br.top + br.height / 2 - wr.top;
+var mx = x1 + 16;                       // elbow column just outside the row
+var r  = Math.min(12, Math.abs(y2 - y1) / 2, Math.abs(x2 - mx));
+var dir = y2 < y1 ? -1 : 1;
+if (r < 2) {
+path.setAttribute('d', 'M' + x1 + ' ' + y1 + 'L' + x2 + ' ' + y2);
+return;
+}
+path.setAttribute('d',
+'M' + x1 + ' ' + y1 +
+'H' + (mx - r) +
+'Q' + mx + ' ' + y1 + ' ' + mx + ' ' + (y1 + dir * r) +
+'V' + (y2 - dir * r) +
+'Q' + mx + ' ' + y2 + ' ' + (mx + r) + ' ' + y2 +
+'H' + x2);
+}
+function revealRow(row){
+/* Only scroll when the row is actually out of view, and only by the minimum
+   needed. Centring on every click dragged the page down as you stepped. */
+var head = tk.querySelector('.tk__head').getBoundingClientRect().bottom;
+var footer = parseInt(getComputedStyle(document.documentElement)
+  .getPropertyValue('--footer-h'), 10) || 96;
+var top = head + 12;
+var bottom = window.innerHeight - footer - 12;
+var r = row.getBoundingClientRect();
+if (r.top >= top && r.bottom <= bottom) return;      // already visible, stay put
+var delta = (r.height > bottom - top || r.top < top) ? r.top - top : r.bottom - bottom;
+window.scrollBy({top: delta, behavior:'smooth'});
+}
+function link(label, scroll){
+var row = rows().filter(function(r){
+return r.querySelector('input').getAttribute('aria-label') === label;
+})[0];
+if (!row) return;
+active = label;
+slot.querySelectorAll('.line.is-linked').forEach(function(r){ r.classList.remove('is-linked'); });
+row.classList.add('is-linked');
+var b = BOXES[label];
+box.hidden = false;
+box.style.left   = b[0] + '%';
+box.style.top    = b[1] + '%';
+box.style.width  = b[2] + '%';
+box.style.height = b[3] + '%';
+if (scroll !== false) {
+revealRow(row);
+var bt = page.getBoundingClientRect().height * (b[1] / 100);
+viewer.scrollTo({top: Math.max(0, bt - viewer.clientHeight / 2), behavior:'smooth'});
+}
+setTimeout(function(){ drawWire(row); }, 340);
+requestAnimationFrame(function(){ drawWire(row); });
+syncNextBtn();
+}
+function step(delta){
+var list = rows();
+if (!list.length) return;
+var labels = list.map(function(r){ return r.querySelector('input').getAttribute('aria-label'); });
+var i = labels.indexOf(active);
+var next = i === -1 ? 0 : (i + delta + labels.length) % labels.length;
+link(labels[next]);
+}
+var nextBtn   = tk.querySelector('[data-tk-next]');
+var nextLabel = tk.querySelector('[data-tk-nextlabel]');
+var chevr     = tk.querySelector('.tk__chevr');
+function atLastField(){
+var labels = rows().map(function(r){ return r.querySelector('input').getAttribute('aria-label'); });
+return labels.length > 0 && active === labels[labels.length - 1];
+}
+function syncNextBtn(){
+var done = atLastField();
+nextLabel.textContent = done ? 'Done' : 'Next field';
+if (chevr) chevr.style.display = done ? 'none' : '';
+}
+var DOCS = {
+'W-2 (Christopher Doe)':      {company:'Atlantic Software Inc'},
+'W-2 (Janice Doe)':           {company:'NovaGen BioResearch'},
+'1099-INT (Christopher Doe)': {company:'Atlantic Software Inc'}
+};
+var DOC_ORDER = ['W-2 (Christopher Doe)','W-2 (Janice Doe)','1099-INT (Christopher Doe)'];
+function setDoc(name){
+var doc = DOCS[name];
+if (!doc) return;
+selLbl.textContent = name;
+menu.querySelectorAll('.tk__opt').forEach(function(o){
+if (o.textContent === name) o.setAttribute('aria-current','true');
+else o.removeAttribute('aria-current');
+});
+var title = slot.querySelector('.formcard__title');
+var sub   = slot.querySelector('.formcard__sub');
+if (title) title.textContent = name;
+if (sub)   sub.textContent   = doc.company;
+clearWire();
+active = null;
+syncNextBtn();
+window.scrollTo({top:0, behavior:'smooth'});
+viewer.scrollTo({top:0, behavior:'smooth'});
+}
+function advanceDoc(){
+var i = DOC_ORDER.indexOf(selLbl.textContent);
+setDoc(DOC_ORDER[(i + 1) % DOC_ORDER.length]);
+}
+function open(label){
+tk.setAttribute('aria-hidden','false');
+document.body.classList.add('is-leaving');
+setTimeout(function(){
+document.body.classList.remove('is-leaving');
+document.body.classList.add('is-comparing');
+window.scrollTo({top:0});
+clearWire();
+syncNextBtn();
+if (label) setTimeout(function(){ link(label); }, 260);
+}, 180);
+}
+function close(){
+document.body.classList.remove('is-comparing');
+tk.setAttribute('aria-hidden','true');
+clearWire();
+active = null;
+}
+function redraw(){
+if (!active || !document.body.classList.contains('is-comparing')) return;
+var row = slot.querySelector('.line.is-linked');
+if (row) drawWire(row);
+}
+slot.addEventListener('scroll', redraw);
+viewer.addEventListener('scroll', redraw);
+window.addEventListener('resize', redraw);
+tk.querySelectorAll('[data-tk-exit]').forEach(function(b){ b.addEventListener('click', close); });
+tk.querySelectorAll('[data-tk-step]').forEach(function(b){
+b.addEventListener('click', function(){
+var d = parseInt(b.getAttribute('data-tk-step'),10);
+if (d > 0 && atLastField()) { advanceDoc(); return; }
+step(d);
+});
+});
+var ZOOM = [100,125,150,175,200], zi = 3;
+var zlabel = tk.querySelector('[data-tk-zoomlabel]');
+tk.querySelectorAll('[data-tk-zoom]').forEach(function(b){
+b.addEventListener('click', function(){
+zi = Math.max(0, Math.min(ZOOM.length-1, zi + parseInt(b.getAttribute('data-tk-zoom'),10)));
+zlabel.textContent = ZOOM[zi] + '%';
+page.style.width = (ZOOM[zi] / 175 * 160) + '%';
+redraw();
+});
+});
+var selBtn = tk.querySelector('[data-tk-selectbtn]');
+var menu   = tk.querySelector('[data-tk-menu]');
+var selLbl = tk.querySelector('[data-tk-selectlabel]');
+function setMenu(on){ menu.hidden = !on; selBtn.setAttribute('aria-expanded', String(on)); }
+selBtn.addEventListener('click', function(e){ e.stopPropagation(); setMenu(menu.hidden); });
+menu.querySelectorAll('.tk__opt').forEach(function(opt){
+if (opt.textContent === selLbl.textContent) opt.setAttribute('aria-current','true');
+opt.addEventListener('click', function(){
+setDoc(opt.textContent);
+setMenu(false);
+});
+});
+document.addEventListener('click', function(){ setMenu(false); });
+document.addEventListener('keydown', function(e){
+if (e.key !== 'Escape') return;
+if (!menu.hidden) { setMenu(false); return; }
+if (document.body.classList.contains('is-comparing')) close();
+});
+return {open:open, close:close};
+})();
+document.querySelectorAll('.btn-lg--outlined,.btn-sm').forEach(function(b){
+if (!TK) return;
+var t = b.textContent.trim();
+if (t === 'Form comparison mode' || t === 'Open Form W-2') {
+if (b.closest('.takeover')) return;
+b.addEventListener('click', function(){ TK.open(); });
+}
+});
+(function(){
+var ICON_COMPARE = '<span class="actionicon"><span class="ico" style="width:20px;height:20px">'
++ '<i class="lf" style="inset:8.33% 8.33% 4.17% 16.67%">'
++ '<svg viewBox="0 0 15 17.5" preserveAspectRatio="none"><use href="#g-file-search"/></svg>'
++ '</i></span></span>';
+var ICON_NOTE = '<span class="actionicon"><span class="ico" style="width:20px;height:20px">'
++ '<i class="lf" style="inset:16.67% 12.5% 12.5% 12.5%">'
++ '<svg viewBox="0 0 18 17" preserveAspectRatio="none"><use href="#g-message2"/></svg>'
++ '</i></span></span>';
+document.querySelectorAll('.line:not(.line--error)').forEach(function(line){
+if (line.closest('.takeover')) return;
+var label = line.querySelector('.line__label p');
+var name = label ? label.textContent.trim() : 'this field';
+var actions = document.createElement('div');
+actions.className = 'line__actions';
+actions.innerHTML =
+'<div class="rowaction rowaction--brand" role="button" tabindex="0"'
++ ' aria-label="Compare ' + name + ' on the W-2">'
++ ICON_COMPARE + '<span class="rowaction__text t-reg-sm">Compare on W-2</span>'
++ '</div>'
++ '<div class="rowaction rowaction--brand" style="gap:8px" role="button" tabindex="0"'
++ ' aria-label="Add a note on ' + name + '">'
++ '<span class="vdivider"></span>' + ICON_NOTE
++ '</div>';
+line.appendChild(actions);
+var cmp = actions.querySelector('.rowaction');
+var fld = line.querySelector('input');
+if (cmp && fld && TK) {
+cmp.addEventListener('click', function(){ TK.open(fld.getAttribute('aria-label')); });
+}
+});
+})();
+(function(){
+var switches = document.querySelectorAll('.switch[role="switch"]');
+function setSources(on){
+document.body.classList.toggle('is-sources', on);
+switches.forEach(function(sw){ sw.setAttribute('aria-checked', String(on)); });
+}
+switches.forEach(function(sw){
+sw.setAttribute('tabindex','0');
+sw.addEventListener('click', function(){
+setSources(sw.getAttribute('aria-checked') !== 'true');
+});
+sw.addEventListener('keydown', function(e){
+if (e.key === ' ' || e.key === 'Enter'){
+e.preventDefault();
+setSources(sw.getAttribute('aria-checked') !== 'true');
+}
+});
+});
+})();
+document.querySelectorAll('[data-card-toggle]').forEach(function(btn){
+btn.addEventListener('click', function(){
+var card = btn.closest('[data-card]');
+var open = btn.getAttribute('aria-expanded') === 'true';
+btn.setAttribute('aria-expanded', String(!open));
+card.classList.toggle('is-collapsed', open);
+});
+});
+(function(){
+var panel = document.getElementById('issues');
+var scrim = document.querySelector('[data-iss-scrim]');
+var trigger = document.querySelector('.btn-issues');
+if (!panel || !trigger) return;
+function open(){
+scrim.hidden = false;
+requestAnimationFrame(function(){
+document.body.classList.add('is-issues');
+panel.setAttribute('aria-hidden','false');
+});
+}
+function close(){
+document.body.classList.remove('is-issues');
+panel.setAttribute('aria-hidden','true');
+setTimeout(function(){
+if (!document.body.classList.contains('is-issues')) scrim.hidden = true;
+}, 220);
+}
+trigger.addEventListener('click', open);
+scrim.addEventListener('click', close);
+panel.querySelectorAll('[data-iss-close]').forEach(function(b){
+b.addEventListener('click', close);
+});
+document.addEventListener('keydown', function(e){
+if (e.key === 'Escape' && document.body.classList.contains('is-issues')) close();
+});
+panel.querySelectorAll('[data-iss-goto]').forEach(function(btn){
+btn.addEventListener('click', function(){
+var label = btn.getAttribute('data-iss-goto');
+close();
+if (!label) return;
+if (TK) TK.close();
+var row = [].slice.call(document.querySelectorAll('.body .line')).filter(function(l){
+var i = l.querySelector('input');
+return i && i.getAttribute('aria-label') === label;
+})[0];
+if (!row) return;
+setTimeout(function(){
+row.scrollIntoView({block:'center', behavior:'smooth'});
+row.classList.remove('is-flash');
+void row.offsetWidth;
+row.classList.add('is-flash');
+var input = row.querySelector('input');
+if (input) input.focus({preventScroll:true});
+}, 260);
+});
+});
+})();</script>
+</html>
