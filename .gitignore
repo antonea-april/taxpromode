@@ -10,3 +10,6 @@
 
 # Dependencies (not used yet, but just in case)
 node_modules/
+
+# Claude Code local settings (machine-specific)
+.claude/settings.local.json
