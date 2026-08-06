@@ -234,7 +234,6 @@ body.is-notes .notes{transform:none}
 <span class="subcat__caption t-reg-xs">W-2</span>
 </button>
 <button class="subcat"><span class="subcat__body"><span class="subcat__label t-reg-sm">Self-employment</span></span><span class="subcat__caption t-reg-xs">Schedule C</span></button>
-<button class="subcat subcat--child" data-bvu-open><span class="subcat__body"><span class="subcat__label t-reg-sm">Doe Design Group</span></span></button>
 <button class="subcat"><span class="subcat__body"><span class="subcat__label t-reg-sm">Interest</span><b data-i="g-alert-triangle|8.2% 8.39% 16.67% 8.3%|0 0 13.3287 12.0212|16|"></b></span><span class="subcat__caption t-reg-xs">1099-INT, 1099-OID</span></button>
 <button class="subcat"><span class="subcat__body"><span class="subcat__label t-reg-sm">Dividends</span><b data-i="g-check|25% 12.5% 25% 16.67%|0 0 11.3333 8|16|"></b></span><span class="subcat__caption t-reg-xs">1099-DIV</span></button>
 <button class="subcat"><span class="subcat__body" style="align-items:baseline"><span class="subcat__label t-reg-sm">Capital gains</span><b data-i="g-check|25% 12.5% 25% 16.67%|0 0 11.3333 8|16|"></b></span><span class="subcat__caption t-reg-xs">Schedule D, 1099-B, 1099-DA</span></button>
@@ -1454,23 +1453,30 @@ el.replaceWith(sp);
 }
 window.expandIcons=expandIcons;
 expandIcons(document);
-/* Search: focusing the box prefills a query and reveals matching topics. */
+/* Search: query-aware results; some rows deep-link to a page and a field. */
 (function(){
 var wrap=document.querySelector('.srch');
 if(!wrap) return;
 var input=wrap.querySelector('input');
-var RESULTS=[
-{name:'Business vehicle use',form:'Schedule C',crumb:['Income','Self-employment','Doe Design Group']},
-{name:'Business mileage',form:'Schedule C',crumb:['Income','Self-employment','Doe Design Group']},
+var clearBtn=wrap.querySelector('.searchpill__clear');
+// Default result set (query mentions a vehicle / general)
+var VEHICLE=[
+{name:'Business vehicle use',form:'Schedule C',crumb:['Income','Self-employment','Doe Design Group'],page:'bvu'},
+{name:'Business mileage',form:'Schedule C',crumb:['Income','Self-employment','Doe Design Group'],page:'bvu',field:'44: Miles driven in 2026'},
 {name:'Rental vehicle',form:'Schedule E',crumb:['Income','Rental & royalty']},
 {name:'Qualified vehicle loan interest',form:'Schedule 1-A',crumb:['Deductions']},
 {name:'Clean vehicle / EV credit',form:'8936',crumb:['Credits']},
 {name:'Depreciable assets',form:'Schedule C (4562)',crumb:['Income','Self-employment','Doe Design Group']},
 {name:'Section 179 election',form:'Schedule C (4562)',crumb:['Income','Self-employment','Doe Design Group']},
 {name:'Listed property',form:'Schedule C (4562)',crumb:['Income','Self-employment','Doe Design Group']},
-{name:'Tolls and parking',form:'Schedule C',crumb:['Income','Self-employment','Doe Design Group']}
+{name:'Tolls and parking',form:'Schedule C',crumb:['Income','Self-employment','Doe Design Group'],page:'bvu',field:'9: Parking fees and tolls'}
 ];
-var clearBtn=wrap.querySelector('.searchpill__clear');
+// Typing "tolls" surfaces field-level matches that jump straight to the field
+var TOLLS=[
+{name:'Tolls and parking',form:'Schedule C',crumb:['Self-employment','Doe Design Group','Business vehicle use'],page:'bvu',field:'9: Parking fees and tolls'},
+{name:'Tolls and parking',form:'Schedule C',crumb:['Income','Rental & royalty','Rental vehicle']}
+];
+function resultsFor(q){ return /toll/i.test(q||'') ? TOLLS : VEHICLE; }
 var SEP='<span class="srchrow__sep"><svg viewBox="0 0 24 24" preserveAspectRatio="none"><use href="#g-chev-right-stroke"/></svg></span>';
 function crumbHTML(a){
 return '<div class="srchrow__crumb t-reg-sm">'+a.map(function(c,i){return (i?SEP:'')+'<span>'+c+'</span>';}).join('')+'</div>';
@@ -1483,20 +1489,27 @@ var menu=document.createElement('div');
 menu.className='srchmenu';
 menu.hidden=true;
 menu.setAttribute('role','listbox');
-menu.innerHTML='<div class="srchmenu__list">'+RESULTS.map(function(r){
-return '<div class="srchrow" role="option"><div class="srchrow__title"><span class="srchrow__name t-med-md">'+r.name+'</span><span class="srchrow__form t-reg-md">'+r.form+'</span></div>'+crumbHTML(r.crumb)+'</div>';
-}).join('')+'</div>'+FOOT;
+menu.innerHTML='<div class="srchmenu__list"></div>'+FOOT;
 wrap.appendChild(menu);
-var rows=[].slice.call(menu.querySelectorAll('.srchrow'));
-var activeIndex=-1;
+var listEl=menu.querySelector('.srchmenu__list');
+var current=[]; var activeIndex=-1;
+function rowEls(){ return [].slice.call(listEl.querySelectorAll('.srchrow')); }
+function render(results){
+current=results; activeIndex=-1;
+listEl.innerHTML=results.map(function(r){
+return '<div class="srchrow" role="option"><div class="srchrow__title"><span class="srchrow__name t-med-md">'+r.name+'</span><span class="srchrow__form t-reg-md">'+r.form+'</span></div>'+crumbHTML(r.crumb)+'</div>';
+}).join('');
+}
 function setActive(i){
-if(activeIndex>=0 && rows[activeIndex]) rows[activeIndex].classList.remove('is-active');
+var els=rowEls();
+els.forEach(function(e){ e.classList.remove('is-active'); });
 activeIndex=i;
-if(i>=0 && rows[i]){ rows[i].classList.add('is-active'); rows[i].scrollIntoView({block:'nearest'}); }
+if(i>=0 && els[i]){ els[i].classList.add('is-active'); els[i].scrollIntoView({block:'nearest'}); }
 }
 function syncClear(){ clearBtn.hidden = !input.value; }
 function openMenu(){
 if(!input.value) input.value='Vehicle';
+render(resultsFor(input.value));
 menu.hidden=false;
 wrap.classList.add('is-open');
 syncClear();
@@ -1504,46 +1517,58 @@ syncClear();
 function closeMenu(){
 menu.hidden=true;
 wrap.classList.remove('is-open');
-setActive(-1);
+activeIndex=-1;
 clearBtn.hidden=true;
+}
+function selectResult(r){
+if(!r) return;
+input.value=r.name; syncClear(); closeMenu(); input.blur();
+if(r.page==='bvu' && window.openBVU) window.openBVU(r.field);
 }
 input.addEventListener('focus',openMenu);
 input.addEventListener('click',function(e){ e.stopPropagation(); openMenu(); });
-input.addEventListener('input',syncClear);
+input.addEventListener('input',function(){ syncClear(); render(resultsFor(input.value)); });
 document.addEventListener('click',function(e){ if(!wrap.contains(e.target)) closeMenu(); });
 input.addEventListener('keydown',function(e){
 if(e.key==='Escape'){ closeMenu(); input.blur(); return; }
 if(menu.hidden) return;
-if(e.key==='ArrowDown'){ e.preventDefault(); setActive(Math.min(rows.length-1, activeIndex+1)); }
+var els=rowEls();
+if(e.key==='ArrowDown'){ e.preventDefault(); setActive(Math.min(els.length-1, activeIndex+1)); }
 else if(e.key==='ArrowUp'){ e.preventDefault(); setActive(Math.max(0, activeIndex-1)); }
-else if(e.key==='Enter' && activeIndex>=0){ e.preventDefault(); input.value=rows[activeIndex].querySelector('.srchrow__name').textContent; syncClear(); closeMenu(); }
+else if(e.key==='Enter' && activeIndex>=0){ e.preventDefault(); selectResult(current[activeIndex]); }
 });
 clearBtn.addEventListener('mousedown',function(e){ e.preventDefault(); });
 clearBtn.addEventListener('click',function(e){ e.preventDefault(); e.stopPropagation(); input.value=''; closeMenu(); input.blur(); });
-rows.forEach(function(row){
-row.addEventListener('mouseenter',function(){ setActive(rows.indexOf(row)); });
-row.addEventListener('click',function(){
-var nm=row.querySelector('.srchrow__name').textContent;
-input.value=nm; syncClear(); closeMenu(); input.blur();
-if(nm==='Business vehicle use' && window.openBVU) window.openBVU();
-});
-});
+listEl.addEventListener('mouseover',function(e){ var row=e.target.closest('.srchrow'); if(row) setActive(rowEls().indexOf(row)); });
+listEl.addEventListener('click',function(e){ var row=e.target.closest('.srchrow'); if(row) selectResult(current[rowEls().indexOf(row)]); });
 })();
 /* Business vehicle use sub-page: open from search, swap the content with a fade. */
 (function(){
 var prevActive=null;
 function seSubcat(){
 return [].filter.call(document.querySelectorAll('.navigation .subcat'),function(b){
-var l=b.querySelector('.subcat__label'); return l && l.textContent.trim()==='Doe Design Group';
+var l=b.querySelector('.subcat__label'); return l && l.textContent.trim()==='Self-employment';
 })[0];
 }
-window.openBVU=function(){
+function flashField(aria){
+var row=[].filter.call(document.querySelectorAll('.bvuview .line'),function(l){
+var i=l.querySelector('input'); return i && i.getAttribute('aria-label')===aria;
+})[0];
+if(!row) return;
+row.scrollIntoView({block:'center',behavior:'smooth'});
+row.classList.remove('is-flash'); void row.offsetWidth; row.classList.add('is-flash');
+var input=row.querySelector('input'); if(input) input.focus({preventScroll:true});
+}
+window.openBVU=function(field){
+var already=document.body.classList.contains('is-bvu');
 prevActive=document.querySelector('.navigation .subcat--active');
 if(prevActive){ prevActive.classList.remove('subcat--active'); prevActive.removeAttribute('aria-current'); }
 var se=seSubcat();
 if(se){ se.classList.add('subcat--active'); se.setAttribute('aria-current','page'); }
 document.body.classList.add('is-bvu');
-window.scrollTo({top:0,behavior:'smooth'});
+if(!field) window.scrollTo({top:0,behavior:'smooth'});
+// After the page has faded in, scroll to + flash the target field.
+if(field) setTimeout(function(){ flashField(field); }, already ? 60 : 400);
 };
 function closeBVU(){
 if(!document.body.classList.contains('is-bvu')) return;
