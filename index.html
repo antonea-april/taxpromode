@@ -44,7 +44,7 @@ body.is-notes .notes{transform:none}
 .notes__headright{display:flex;align-items:center;gap:var(--spacing-md);flex:0 0 auto}
 .noteadd{display:flex;align-items:center;gap:var(--spacing-sm);padding:6px var(--padding-xs);background:var(--text-text);color:var(--basic-white);border-radius:var(--radius-md);cursor:pointer;white-space:nowrap;transition:background-color .18s ease}
 .noteadd:hover{background:#000}
-.note--compose{background:var(--background-body-dimmed);transform-origin:top;animation:noteComposeIn .24s cubic-bezier(.2,.7,.3,1)}@keyframes noteComposeIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+.notecompose{display:grid;grid-template-rows:0fr;transition:grid-template-rows .42s cubic-bezier(.2,.8,.25,1)}.notecompose.is-in{grid-template-rows:1fr}.notecompose>.note--compose{overflow:hidden;min-height:0}.note--compose{background:var(--background-body-dimmed);animation:noteComposeIn .42s ease}@keyframes noteComposeIn{0%{opacity:0;box-shadow:inset 0 0 0 1.5px var(--border-brand-border)}55%{opacity:1}100%{opacity:1;box-shadow:inset 0 0 0 0 rgba(94,0,255,0)}}
 .note--compose .note__actions{display:none}
 .note__input{width:100%;background:none;border:0;outline:none;padding:0;color:var(--text-text)}
 .note__input::placeholder{color:var(--text-disabled-text);opacity:1}
@@ -1712,15 +1712,26 @@ var list=panel.querySelector('.notes__list');
 var ICON_RETURN='<span class="ico" style="width:16px;height:16px"><i class="lf" style="inset:16.67%"><svg viewBox="0 0 10 10" preserveAspectRatio="none"><use href="#g-corner-down-left"/></svg></i></span>';
 function titleBlock(title,subtitle){return title?('<div class="note__titlecol"><p class="note__title t-med-md">'+title+'</p>'+(subtitle?'<p class="note__sub t-med-sm">'+subtitle+'</p>':'')+'</div>'):'';}
 function openComposer(title,subtitle){
+var wasOpen=document.body.classList.contains('is-notes');
 open();
-var old=list.querySelector('.note--compose'); if(old) old.remove();
+// If the panel was closed, wait for its slide-in to finish so the compose
+// field's own entrance animation is actually visible (not hidden off-screen).
+setTimeout(function(){
+var old=list.querySelector('.notecompose'); if(old) old.remove();
+// Wrapper does the height reveal: it grows from 0, pushing the notes below down.
+var wrap=document.createElement('div');
+wrap.className='notecompose';
 var el=document.createElement('div');
 el.className='note note--compose';
 el.innerHTML=titleBlock(title,subtitle)
 +'<input class="note__input t-reg-sm" placeholder="Start typing...">'
 +'<div class="note__composeactions"><button class="note__delete t-med-sm" type="button">Delete</button>'
 +'<button class="noteadd" type="button" data-note-save>'+ICON_RETURN+'<span class="t-med-sm">Add</span></button></div>';
-list.insertBefore(el,list.firstChild);
+wrap.appendChild(el);
+list.insertBefore(wrap,list.firstChild);
+panel.scrollTop=0; // keep the newly opened field in view at the top
+void wrap.offsetHeight; // flush the collapsed (0fr) state...
+wrap.classList.add('is-in'); // ...then transition open, sliding the content below down
 var input=el.querySelector('.note__input');
 function commit(){
 var v=input.value.trim();
@@ -1730,12 +1741,14 @@ note.className='note';
 note.innerHTML=titleBlock(title,subtitle)+'<p class="note__body t-reg-sm">'+v.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</p>'+'<div class="note__foot t-reg-sm"><span>Just now</span><span>Sabrina C.</span></div>';
 list.insertBefore(note,list.firstChild);
 }
-el.remove();
+wrap.remove();
 }
-el.querySelector('.note__delete').addEventListener('click',function(){el.remove();});
+el.querySelector('.note__delete').addEventListener('click',function(){wrap.remove();});
 el.querySelector('[data-note-save]').addEventListener('click',commit);
-input.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();commit();}else if(e.key==='Escape'){e.stopPropagation();el.remove();}});
-setTimeout(function(){input.focus();},320);
+input.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();commit();}else if(e.key==='Escape'){e.stopPropagation();wrap.remove();}});
+// focus once the reveal has played
+setTimeout(function(){input.focus();},300);
+}, wasOpen?0:300);
 }
 document.querySelectorAll('[data-note-comment]').forEach(function(btn){
 btn.addEventListener('click',function(e){
