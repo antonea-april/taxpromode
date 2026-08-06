@@ -1476,7 +1476,13 @@ var TOLLS=[
 {name:'Tolls and parking',form:'Schedule C',crumb:['Self-employment','Doe Design Group','Business vehicle use'],page:'bvu',field:'9: Parking fees and tolls'},
 {name:'Tolls and parking',form:'Schedule C',crumb:['Income','Rental & royalty','Rental vehicle']}
 ];
-function resultsFor(q){ return /toll/i.test(q||'') ? TOLLS : VEHICLE; }
+function resultsFor(q){
+q=(q||'').trim().toLowerCase();
+if(!q) return [];
+if(q.indexOf('toll')>=0 || q.indexOf('park')>=0 || 'tolls'.indexOf(q)===0) return TOLLS;
+if(q.indexOf('veh')>=0 || q.indexOf('car')>=0 || q.indexOf('mile')>=0 || 'vehicle'.indexOf(q)===0) return VEHICLE;
+return [];
+}
 var SEP='<span class="srchrow__sep"><svg viewBox="0 0 24 24" preserveAspectRatio="none"><use href="#g-chev-right-stroke"/></svg></span>';
 function crumbHTML(a){
 return '<div class="srchrow__crumb t-reg-sm">'+a.map(function(c,i){return (i?SEP:'')+'<span>'+c+'</span>';}).join('')+'</div>';
@@ -1507,13 +1513,14 @@ activeIndex=i;
 if(i>=0 && els[i]){ els[i].classList.add('is-active'); els[i].scrollIntoView({block:'nearest'}); }
 }
 function syncClear(){ clearBtn.hidden = !input.value; }
-function openMenu(){
-if(!input.value) input.value='Vehicle';
+function refresh(){
 render(resultsFor(input.value));
-menu.hidden=false;
-wrap.classList.add('is-open');
+var has=current.length>0;
+menu.hidden=!has;
+wrap.classList.toggle('is-open',has);
 syncClear();
 }
+function openMenu(){ refresh(); }
 function closeMenu(){
 menu.hidden=true;
 wrap.classList.remove('is-open');
@@ -1527,7 +1534,7 @@ if(r.page==='bvu' && window.openBVU) window.openBVU(r.field);
 }
 input.addEventListener('focus',openMenu);
 input.addEventListener('click',function(e){ e.stopPropagation(); openMenu(); });
-input.addEventListener('input',function(){ syncClear(); render(resultsFor(input.value)); });
+input.addEventListener('input',refresh);
 document.addEventListener('click',function(e){ if(!wrap.contains(e.target)) closeMenu(); });
 input.addEventListener('keydown',function(e){
 if(e.key==='Escape'){ closeMenu(); input.blur(); return; }
